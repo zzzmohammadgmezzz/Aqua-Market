@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما - AquaMarket - فروشگاه تخصصی قطعات گیمینگ</title>
+    <meta name="description" content="درباره AquaMarket - بزرگترین فروشگاه آنلاین قطعات کامپیوتر و تجهیزات گیمینگ با بیش از ۱۰ سال سابقه درخشان">
+    
+    <!-- Persian Font -->
+    <link rel="stylesheet" href="assets/fonts/vazirmatn-v33.003/Vazirmatn-font-face.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button class="icon-btn menu-toggle" aria-label="منو" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="/assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <form class="search-form">
+                        <input type="text" placeholder="جستجوی محصولات..." aria-label="جستجوی محصولات">
+                        <button type="submit" aria-label="جستجو">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <button class="icon-btn theme-toggle" aria-label="تغییر تم" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="icon-btn cart-btn" aria-label="سبد خرید" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    
+                    <button class="icon-btn account-btn" aria-label="حساب کاربری" id="accountBtn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="product.html" class="nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="nav-link">تخفیف‌ها</a></li>
+                    <li><a href="/assemble.html" class="nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="/blog.html" class="nav-link">بلاگ</a></li>
+                    <li><a href="about.html" class="nav-link active">درباره ما</a></li>
+                    <li><a href="tel:02112345678" class="nav-link">تماس</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <a href="index.html">
+                        <img src="/assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </a>
+                </div>
+                <button class="close-mobile-menu" aria-label="بستن منو" id="closeMobileMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="mobile-nav-link">خانه</a></li>
+                    <li><a href="product.html" class="mobile-nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="mobile-nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="mobile-nav-link">تخفیف‌ها</a></li>
+                    <li><a href="/assemble.html" class="mobile-nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="/blog.html" class="mobile-nav-link">بلاگ</a></li>
+                    <li><a href="about.html" class="mobile-nav-link active">درباره ما</a></li>
+                    <li><a href="tel:02112345678" class="mobile-nav-link">تماس</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-footer">
+                <div class="mobile-header-icons">
+                    <button class="mobile-icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="mobile-icon-btn cart-btn" aria-label="سبد خرید">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="mobile-icon-btn account-btn" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="مسیر">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html">خانه</a></li>
+                    <li aria-current="page">درباره ما</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <!-- About Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-hero-content">
+                    <h1 class="page-title">درباره AquaMarket</h1>
+                    <p class="page-description">پیشرو در ارائه بهترین تجربه خرید قطعات کامپیوتر و گیمینگ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <!-- Main About Text -->
+                    <div class="about-main">
+                        <div class="about-card">
+                            <h2>داستان ما</h2>
+                            <p>
+                                AquaMarket در سال ۱۳۹۲ با یک مأموریت ساده آغاز به کار کرد: ارائه بهترین قطعات کامپیوتر و تجهیزات گیمینگ با بالاترین کیفیت و مناسب‌ترین قیمت به کاربران ایرانی. 
+                            </p>
+                            <p>
+                                از آن زمان تاکنون، ما به یکی از معتبرترین و بزرگترین فروشگاه‌های آنلاین در زمینه قطعات کامپیوتر و گیمینگ تبدیل شده‌ایم. تیم متخصص ما همواره در تلاش است تا با ارائه محصولات باکیفیت از برندهای معتبر جهانی، خدمات پس از فروش قوی و پشتیبانی ۲۴ ساعته، رضایت کامل مشتریان را جلب کند.
+                            </p>
+                            
+                            <div class="mission-vision">
+                                <div class="mission">
+                                    <h3><i class="fas fa-bullseye"></i> مأموریت ما</h3>
+                                    <p>ارائه بهترین تجربه خرید آنلاین با محصولات اصل، گارانتی معتبر و پشتیبانی حرفه‌ای به جامعه گیمینگ و فناوری ایران</p>
+                                </div>
+                                <div class="vision">
+                                    <h3><i class="fas fa-eye"></i> چشم‌انداز ما</h3>
+                                    <p>تبدیل شدن به برترین پلتفرم فروش آنلاین قطعات کامپیوتر و گیمینگ در خاورمیانه با تمرکز بر نوآوری و رضایت مشتری</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stats Section -->
+                        <div class="stats-section">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-number" data-target="50000">۵۰,۰۰۰+</div>
+                                <div class="stat-label">مشتری راضی</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                                <div class="stat-number" data-target="150000">۱۵۰,۰۰۰+</div>
+                                <div class="stat-label">محصول فروخته شده</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="stat-number" data-target="10">۱۰+</div>
+                                <div class="stat-label">سال تجربه</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="stat-number">۲۴/۷</div>
+                                <div class="stat-label">پشتیبانی</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="about-sidebar">
+                        <!-- Contact Info -->
+                        <div class="contact-card">
+                            <h3>اطلاعات تماس</h3>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <strong>آدرس شعبه مرکزی:</strong>
+                                        <span>تهران، خیابان ولیعصر، پلاک ۱۲۳۴</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <strong>تلفن تماس:</strong>
+                                        <span>۰۲۱-۱۲۳۴۵۶۷۸</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <strong>ایمیل:</strong>
+                                        <span>info@aquamarket.ir</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <strong>ساعات کاری:</strong>
+                                        <span>شنبه تا پنجشنبه: ۹ صبح تا ۶ عصر</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="social-card">
+                            <h3>ما را دنبال کنید</h3>
+                            <div class="social-links">
+                                <a href="https://instagram.com/aquamarket" class="social-link" target="_blank">
+                                    <span class="social-text">اینستاگرام</span>
+                                </a>
+                                <a href="https://t.me/aquamarket" class="social-link" target="_blank">
+                                    <span class="social-text">تلگرام</span>
+                                </a>
+                                <a href="https://youtube.com/aquamarket" class="social-link" target="_blank">
+                                    <span class="social-text">یوتیوب</span>
+                                </a>
+                                <a href="https://twitter.com/aquamarket" class="social-link" target="_blank">
+                                    <span class="social-text">توییتر</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Gallery -->
+                        <div class="gallery-card">
+                            <h3>گالری تصاویر</h3>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="/assets/img/Caves-Toy-Store-018.jpg" alt="نمای داخلی فروشگاه" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="/assets/img/Shppl1000349www.tiktarh.com_.jpg" alt="تیم پشتیبانی" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="/assets/img/Warehouse-1.jpg" alt="انبار محصولات" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="/assets/img/Import-of-gaming-equipment.jpg" alt="محصولات گیمینگ" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose-us">
+            <div class="container">
+                <div class="section-header">
+                    <h2>چرا AquaMarket را انتخاب کنید؟</h2>
+                    <p>مزایای منحصر به فردی که ما را از دیگران متمایز می‌کند</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>گارانتی معتبر</h3>
+                        <p>کلیه محصولات با گارانتی رسمی و خدمات پس از فروش معتبر ارائه می‌شوند</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>ارسال سریع</h3>
+                        <p>ارسال رایگان برای خریدهای بالای ۱ میلیون تومان و تحویل در کمترین زمان</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>پشتیبانی ۲۴/۷</h3>
+                        <p>پشتیبانی تلفنی و آنلاین در تمام ساعات شبانه‌روز</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>ضمانت اصالت</h3>
+                        <p>کلیه محصولات اورجینال و دارای ضمانت اصالت کالا می‌باشند</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>آماده تجربه خرید متفاوت هستید؟</h2>
+                    <p>همین حالا به جمع هزاران مشتری راضی ما بپیوندید</p>
+                    <div class="cta-buttons">
+                        <a href="product.html" class="btn btn-primary">مشاهده محصولات</a>
+                        <a href="tel:02112345678" class="btn btn-outline">تماس با ما</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+    <script src="js/about.js"></script>
+</body>
+</html>

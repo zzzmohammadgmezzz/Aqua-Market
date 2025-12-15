@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نقشه سایت - AquaMarket</title>
+    <meta name="description" content="نقشه کامل سایت AquaMarket - دسترسی سریع به تمام صفحات و بخش‌های سایت">
+    <meta name="keywords" content="نقشه سایت, AquaMarket, دسترسی, صفحات سایت">
+    <meta name="author" content="AquaMarket">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="نقشه سایت - AquaMarket">
+    <meta property="og:description" content="نقشه کامل سایت AquaMarket - دسترسی سریع به تمام صفحات و بخش‌های سایت">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aquamarket.ir/sitemap.html">
+    <meta property="og:image" content="/assets/img/og-image.jpg">
+    
+    <!-- Persian Font (Local) -->
+    <link rel="stylesheet" href="assets/fonts/vazirmatn-v33.003/Vazirmatn-font-face.css">
+    
+    <!-- Icons (Local) -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Additional Styles for Sitemap Page */
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .sitemap-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .sitemap-header h1 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .sitemap-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .sitemap-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .sitemap-category {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sitemap-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 207, 207, 0.05) 0%, transparent 50%);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .sitemap-category:hover::before {
+            opacity: 1;
+        }
+        
+        .sitemap-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(0, 207, 207, 0.3);
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(0, 207, 207, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            color: var(--accent);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .sitemap-category:hover .category-icon {
+            background-color: rgba(0, 207, 207, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .category-title {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+        
+        .sitemap-links {
+            list-style: none;
+        }
+        
+        .sitemap-links li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-right: 15px;
+        }
+        
+        .sitemap-links li::before {
+            content: '›';
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: var(--accent);
+            font-weight: bold;
+            transition: var(--transition);
+        }
+        
+        .sitemap-links a {
+            color: var(--text-secondary);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+        }
+        
+        .sitemap-links a:hover {
+            color: var(--accent);
+            padding-right: 5px;
+        }
+        
+        .sitemap-links a:hover::before {
+            transform: translateX(-3px);
+        }
+        
+        .link-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin-right: 8px;
+            line-height: 1;
+        }
+        
+        .link-badge.new {
+            background-color: #2ed573;
+        }
+        
+        .link-badge.popular {
+            background-color: #ff9f43;
+        }
+        
+        .link-badge.featured {
+            background-color: #ff6b81;
+        }
+        
+        .sitemap-search {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .sitemap-search h3 {
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .search-sitemap-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-sitemap-form input {
+            flex: 1;
+            padding: 12px 50px 12px 20px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: inherit;
+            transition: var(--transition);
+            width: 100%;
+        }
+        
+        .search-sitemap-form input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        .search-sitemap-form button {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .search-sitemap-form button:hover {
+            background-color: var(--accent-2);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .sitemap-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .stat-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 25px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(0, 207, 207, 0.3);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .quick-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            color: var(--text-secondary);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .quick-link:hover {
+            background-color: var(--accent);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .quick-link i {
+            margin-left: 8px;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .sitemap-category, .stat-card {
+            animation: fadeInUp 0.6s ease;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .sitemap-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sitemap-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .search-sitemap-form {
+                flex-direction: column;
+                position: static;
+            }
+            
+            .search-sitemap-form input {
+                border-radius: var(--radius);
+                margin-bottom: 10px;
+                padding: 12px 15px;
+                width: 100%;
+            }
+            
+            .search-sitemap-form button {
+                position: static;
+                transform: none;
+                width: 100%;
+                height: auto;
+                border-radius: var(--radius);
+                padding: 12px;
+                margin-top: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .sitemap-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .quick-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .quick-link {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button class="icon-btn menu-toggle" aria-label="منو" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <form class="search-form">
+                        <input type="text" placeholder="جستجوی محصولات..." aria-label="جستجوی محصولات">
+                        <button type="submit" aria-label="جستجو">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <button class="icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="icon-btn cart-btn" aria-label="سبد خرید" aria-expanded="false" aria-controls="cart-panel">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    
+                    <button class="icon-btn account-btn" aria-label="حساب کاربری" aria-expanded="false" aria-controls="account-modal">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="product.html" class="nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="nav-link">تخفیف‌ها</a></li>
+                    <li><a href="assemble.html" class="nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="nav-link">بلاگ</a></li>
+                    <li><a href="about.html" class="nav-link">درباره ما</a></li>
+                    <li><a href="tel:02112345678" class="nav-link">تماس</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <img src="assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                </div>
+                <button class="close-mobile-menu" aria-label="بستن منو">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav" aria-label="منوی موبایل">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="mobile-nav-link">خانه</a></li>
+                    <li><a href="product.html" class="mobile-nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="mobile-nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="mobile-nav-link">تخفیف‌ها</a></li>
+                    <li><a href="assemble.html" class="mobile-nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="mobile-nav-link">بلاگ</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">درباره ما</a></li>
+                    <li><a href="tel:02112345678" class="mobile-nav-link">تماس</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu-footer">
+                <div class="mobile-header-icons">
+                    <button class="mobile-icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-icon-btn cart-btn" aria-label="سبد خرید">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    
+                    <button class="mobile-icon-btn account-btn" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="مسیر">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html">خانه</a></li>
+                    <li aria-current="page">نقشه سایت</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="sitemap-container">
+                <div class="sitemap-header">
+                    <h1>نقشه سایت AquaMarket</h1>
+                    <p>دسترسی سریع و آسان به تمام صفحات و بخش‌های سایت. از طریق این نقشه می‌توانید به راحتی به محتوای مورد نظر خود دسترسی پیدا کنید.</p>
+                </div>
+                
+                <div class="sitemap-search">
+                    <h3>جستجوی سریع در نقشه سایت</h3>
+                    <form class="search-sitemap-form">
+                        <input type="text" placeholder="صفحه مورد نظر خود را جستجو کنید..." aria-label="جستجو در نقشه سایت">
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="sitemap-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">۸۵+</span>
+                        <span class="stat-label">صفحه فعال</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">۱۲</span>
+                        <span class="stat-label">دسته‌بندی اصلی</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">۵۰۰+</span>
+                        <span class="stat-label">محصول موجود</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">۳۰+</span>
+                        <span class="stat-label">مقاله آموزشی</span>
+                    </div>
+                </div>
+                
+                <div class="sitemap-grid">
+                    <!-- صفحات اصلی -->
+                    <div class="sitemap-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3 class="category-title">صفحات اصلی</h3>
+                        </div>
+                        <ul class="sitemap-links">
+                            <li><a href="index.html">صفحه اصلی <span class="link-badge">خانه</span></a></li>
+                            <li><a href="about.html">درباره ما</a></li>
+                            <li><a href="contact.html">تماس با ما</a></li>
+                            <li><a href="sitemap.html">نقشه سایت <span class="link-badge new">جدید</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- محصولات -->
+                    <div class="sitemap-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <h3 class="category-title">محصولات و فروشگاه</h3>
+                        </div>
+                        <ul class="sitemap-links">
+                            <li><a href="product.html">همه محصولات</a></li>
+                            <li><a href="product.html?filter=bestsellers">پرفروش‌ترین‌ها <span class="link-badge popular">پرفروش</span></a></li>
+                            <li><a href="product.html?filter=discounts">تخفیف‌های ویژه</a></li>
+                            <li><a href="product.html?sort=newest">جدیدترین محصولات <span class="link-badge new">جدید</span></a></li>
+                            <li><a href="product.html?category=laptops">لپ‌تاپ‌های گیمینگ</a></li>
+                            <li><a href="product.html?category=gaming-parts">قطعات کامپیوتر گیمینگ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- دسته‌بندی محصولات -->
+                    <div class="sitemap-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-th-large"></i>
+                            </div>
+                            <h3 class="category-title">دسته‌بندی محصولات</h3>
+                        </div>
+                        <ul class="sitemap-links">
+                            <li><a href="product.html?category=laptops">لپ‌تاپ‌های گیمینگ</a></li>
+                            <li><a href="product.html?category=gaming-parts">قطعات گیمینگ <span class="link-badge featured">ویژه</span></a></li>
+                            <li><a href="product.html?category=monitors">مانیتورهای گیمینگ</a></li>
+                            <li><a href="product.html?category=accessories">لوازم جانبی گیمینگ</a></li>
+                            <li><a href="product.html?category=consoles">کنسول‌های بازی</a></li>
+                            <li><a href="product.html?category=audio">تجهیزات صوتی</a></li>
+                            <li><a href="product.html?category=keyboards">کیبوردهای مکانیکی</a></li>
+                            <li><a href="product.html?category=mice">ماوس‌های گیمینگ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- خدمات -->
+                    <div class="sitemap-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3 class="category-title">خدمات و راهنما</h3>
+                        </div>
+                        <ul class="sitemap-links">
+                            <li><a href="assemble.html">اسمبل هوشمند <span class="link-badge new">جدید</span></a></li>
+                            <li><a href="warranty.html">گارانتی محصولات</a></li>
+                            <li><a href="shipping.html">اطلاعات ارسال</a></li>
+                            <li><a href="return-policy.html">سیاست بازگشت کالا</a></li>
+                            <li><a href="payment-methods.html">روش‌های پرداخت</a></li>
+                            <li><a href="faq.html">سوالات متداول</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- محتوا و مقالات -->
+                    <div class="sitemap-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                            <h3 class="category-title">محتوا و مقالات</h3>
+                        </div>
+                        <ul class="sitemap-links">
+                            <li><a href="blog.html">بلاگ و مقالات <span class="link-badge">آموزشی</span></a></li>
+                            <li><a href="blog.html?category=reviews">بررسی محصولات</a></li>
+                            <li><a href="blog.html?category=tutorials">آموزش‌ها و راهنماها</a></li>
+                            <li><a href="blog.html?category=news">اخبار تکنولوژی</a></li>
+                            <li><a href="blog.html?category=gaming">اخبار گیمینگ</a></li>
+                            <li><a href="video-tutorials.html">آموزش‌های ویدیویی</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- حساب کاربری -->
+                    <div class="sitemap-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <h3 class="category-title">حساب کاربری</h3>
+                        </div>
+                        <ul class="sitemap-links">
+                            <li><a href="login.html">ورود به حساب کاربری</a></li>
+                            <li><a href="register.html">ثبت‌نام جدید</a></li>
+                            <li><a href="profile.html">پروفایل کاربری</a></li>
+                            <li><a href="order-history.html">تاریخچه سفارشات</a></li>
+                            <li><a href="wishlist.html">لیست علاقه‌مندی‌ها</a></li>
+                            <li><a href="addresses.html">آدرس‌های من</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- قوانین و اطلاعات -->
+                    <div class="sitemap-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h3 class="category-title">قوانین و اطلاعات</h3>
+                        </div>
+                        <ul class="sitemap-links">
+                            <li><a href="privacy-terms.html">حریم خصوصی و قوانین</a></li>
+                            <li><a href="terms-of-service.html">شرایط استفاده از خدمات</a></li>
+                            <li><a href="return-policy.html">سیاست بازگشت کالا</a></li>
+                            <li><a href="shipping-policy.html">سیاست ارسال</a></li>
+                            <li><a href="cookie-policy.html">سیاست کوکی‌ها</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- پشتیبانی -->
+                    <div class="sitemap-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3 class="category-title">پشتیبانی و تماس</h3>
+                        </div>
+                        <ul class="sitemap-links">
+                            <li><a href="contact.html">تماس با ما</a></li>
+                            <li><a href="support.html">پشتیبانی آنلاین</a></li>
+                            <li><a href="faq.html">سوالات متداول</a></li>
+                            <li><a href="track-order.html">پیگیری سفارش</a></li>
+                            <li><a href="complaint.html">ثبت شکایت و پیشنهاد</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="quick-links">
+                    <a href="index.html" class="quick-link">
+                        <i class="fas fa-home"></i>
+                        بازگشت به خانه
+                    </a>
+                    <a href="product.html" class="quick-link">
+                        <i class="fas fa-shopping-bag"></i>
+                        مشاهده محصولات
+                    </a>
+                    <a href="assemble.html" class="quick-link">
+                        <i class="fas fa-desktop"></i>
+                        اسمبل هوشمند
+                    </a>
+                    <a href="blog.html" class="quick-link">
+                        <i class="fas fa-newspaper"></i>
+                        مقالات آموزشی
+                    </a>
+                    <a href="contact.html" class="quick-link">
+                        <i class="fas fa-headset"></i>
+                        تماس با پشتیبانی
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </div>
+                    <p class="footer-description">
+                        AquaMarket بزرگترین فروشگاه آنلاین قطعات کامپیوتر و تجهیزات گیمینگ در ایران با بیش از ۱۰ سال سابقه درخشان
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="اینستاگرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="تلگرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" aria-label="یوتیوب">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="توییتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">لینک‌های مفید</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="product.html">محصولات</a></li>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="tel:02112345678">تماس با ما</a></li>
+                        <li><a href="privacy-terms.html">حریم خصوصی و قوانین</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">اطلاعات تماس</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>تهران، خیابان ولیعصر، پلاک ۱۲۳۴</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span><a href="tel:02112345678">۰۲۱-۱۲۳۴۵۶۷۸</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@aquamarket.ir</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">خبرنامه</h3>
+                    <p class="newsletter-text">برای دریافت جدیدترین تخفیف‌ها و محصولات در خبرنامه ما عضو شوید</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="ایمیل خود را وارد کنید" aria-label="ایمیل برای خبرنامه">
+                        <button type="submit" class="btn btn-primary">عضویت</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>کلیه حقوق این وب‌سایت متعلق به AquaMarket می‌باشد © 1404</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="sitemap.html">نقشه سایت</a>
+                    <a href="privacy-terms.html">حریم خصوصی و قوانین</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <button class="floating-btn back-to-top" aria-label="بازگشت به بالا">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <button class="floating-btn support-btn" aria-label="پشتیبانی آنلاین">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Cart Side Panel -->
+    <div class="side-panel cart-panel" id="cart-panel" aria-hidden="true">
+        <div class="panel-header">
+            <h3>سبد خرید شما</h3>
+            <button class="close-panel" aria-label="بستن سبد خرید">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="panel-content">
+            <div class="cart-items">
+                <!-- Cart items will be added dynamically -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>سبد خرید شما خالی است</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="cart-total">
+                <span>جمع کل:</span>
+                <span class="total-price">۰ تومان</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">ادامه فرآیند خرید</button>
+        </div>
+    </div>
+    <div class="panel-overlay" id="cart-overlay"></div>
+
+    <!-- Account Modal -->
+    <div class="modal account-modal" id="account-modal" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>ورود / ثبت‌نام</h3>
+                <button class="close-modal" aria-label="بستن پنجره">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="account-form">
+                    <div class="form-group">
+                        <label for="email-phone">ایمیل یا شماره موبایل</label>
+                        <input type="text" id="email-phone" placeholder="example@email.com یا 09xxxxxxxxx">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">رمز عبور</label>
+                        <input type="password" id="password" placeholder="رمز عبور خود را وارد کنید">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">ورود</button>
+                    <div class="form-footer">
+                        <p>حساب کاربری ندارید؟ <a href="register.html" class="register-link">ثبت‌نام کنید</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-overlay" id="account-overlay"></div>
+    </div>
+
+    <!-- Support Chat Modal -->
+    <div class="modal chat-modal" id="chat-modal" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>پشتیبانی آنلاین</h3>
+                <button class="close-modal" aria-label="بستن پنجره چت">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="chat-messages">
+                    <div class="message received">
+                        <div class="message-content">
+                            <p>سلام! به پشتیبانی AquaMarket خوش آمدید. چطور می‌تونم کمکتون کنم؟</p>
+                        </div>
+                        <span class="message-time">۱۰:۳۰</span>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="پیام خود را بنویسید..." aria-label="پیام برای پشتیبانی">
+                    <button class="send-btn" aria-label="ارسال پیام">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-overlay" id="chat-overlay"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+    
+    <script>
+        // Additional JavaScript for Sitemap Page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality for sitemap
+            const searchInput = document.querySelector('.search-sitemap-form input');
+            const sitemapLinks = document.querySelectorAll('.sitemap-links a');
+            
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase().trim();
+                    
+                    sitemapLinks.forEach(link => {
+                        const linkText = link.textContent.toLowerCase();
+                        const listItem = link.parentElement;
+                        
+                        if (searchTerm === '' || linkText.includes(searchTerm)) {
+                            listItem.style.display = 'block';
+                        } else {
+                            listItem.style.display = 'none';
+                        }
+                    });
+                });
+            }
+            
+            // Add animation delay to category cards
+            const categoryCards = document.querySelectorAll('.sitemap-category');
+            categoryCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Add animation delay to stat cards
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسمبل هوشمند - AquaMarket - ساخت کامپیوتر ایده‌آل شما</title>
+    <meta name="description" content="اسمبل هوشمند کامپیوتر گیمینگ و حرفه‌ای - با ابزار پیشرفته AquaMarket سیستم مورد نظر خود را بسازید">
+    
+    <!-- Persian Font -->
+    <link rel="stylesheet" href="assets/fonts/vazirmatn-v33.003/Vazirmatn-font-face.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/assemble.css">
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button class="icon-btn menu-toggle" aria-label="منو">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="/assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <form class="search-form">
+                        <input type="text" placeholder="جستجوی محصولات..." aria-label="جستجوی محصولات">
+                        <button type="submit" aria-label="جستجو">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <button class="icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="icon-btn cart-btn" aria-label="سبد خرید">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    
+                    <button class="icon-btn account-btn" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="product.html" class="nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="nav-link">تخفیف‌ها</a></li>
+                    <li><a href="assemble.html" class="nav-link active">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="nav-link">بلاگ</a></li>
+                    <li><a href="about.html" class="nav-link">درباره ما</a></li>
+                    <li><a href="tel:02112345678" class="nav-link">تماس</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <img src="/assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                </div>
+                <button class="close-mobile-menu" aria-label="بستن منو">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav" aria-label="منوی موبایل">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="mobile-nav-link">خانه</a></li>
+                    <li><a href="product.html" class="mobile-nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="mobile-nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="mobile-nav-link">تخفیف‌ها</a></li>
+                    <li><a href="assemble.html" class="mobile-nav-link active">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="mobile-nav-link">بلاگ</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">درباره ما</a></li>
+                    <li><a href="tel:02112345678" class="mobile-nav-link">تماس</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu-footer">
+                <div class="mobile-header-icons">
+                    <button class="mobile-icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-icon-btn cart-btn" aria-label="سبد خرید">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    
+                    <button class="mobile-icon-btn account-btn" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="مسیر">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html">خانه</a></li>
+                    <li aria-current="page">اسمبل هوشمند</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <!-- Assemble Hero -->
+        <section class="assemble-hero">
+            <div class="container">
+                <div class="assemble-hero-content">
+                    <h1 class="page-title">اسمبل هوشمند کامپیوتر</h1>
+                    <p class="page-description">با ابزار پیشرفته ما، سیستم ایده‌آل خود را بسازید و از سازگاری کامل قطعات مطمئن شوید</p>
+                    
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">۵۰,۰۰۰+</span>
+                                <span class="stat-label">سیستم اسمبل شده</span>
+                            </div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">۱۰۰%</span>
+                                <span class="stat-label">تضمین سازگاری</span>
+                            </div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">۹۸%</span>
+                                <span class="stat-label">رضایت کاربران</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assemble Wizard -->
+        <section class="assemble-wizard">
+            <div class="container">
+                <div class="wizard-container">
+                    <!-- Wizard Steps -->
+                    <div class="wizard-steps">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">۱</div>
+                            <div class="step-info">
+                                <span class="step-title">انتخاب هدف</span>
+                                <span class="step-description">کاربرد سیستم</span>
+                            </div>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">۲</div>
+                            <div class="step-info">
+                                <span class="step-title">انتخاب قطعات</span>
+                                <span class="step-description">مشخصات فنی</span>
+                            </div>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">۳</div>
+                            <div class="step-info">
+                                <span class="step-title">بررسی نهایی</span>
+                                <span class="step-description">تأیید سازگاری</span>
+                            </div>
+                        </div>
+                        <div class="step" data-step="4">
+                            <div class="step-number">۴</div>
+                            <div class="step-info">
+                                <span class="step-title">نتیجه</span>
+                                <span class="step-description">عملکرد سیستم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wizard Content -->
+                    <div class="wizard-content">
+                        <!-- Step 1: Purpose Selection -->
+                        <div class="wizard-step active" id="step-1">
+                            <div class="step-header">
+                                <h2>سیستم شما برای چه کاری استفاده می‌شود؟</h2>
+                                <p>هدف اصلی خود از ساخت کامپیوتر را انتخاب کنید</p>
+                            </div>
+                            
+                            <div class="purpose-cards">
+                                <div class="purpose-card" data-purpose="gaming">
+                                    <div class="purpose-icon">
+                                        <i class="fas fa-gamepad"></i>
+                                    </div>
+                                    <h3>گیمینگ حرفه‌ای</h3>
+                                    <p>بهترین تجربه بازی با بالاترین فریم‌ریت و گرافیک</p>
+                                    <ul class="purpose-features">
+                                        <li>کارت گرافیک قدرتمند</li>
+                                        <li>پردازنده چند هسته‌ای</li>
+                                        <li>رم پرسرعت</li>
+                                    </ul>
+                                    <div class="budget-range">
+                                        <span>بودجه پیشنهادی: ۵۰-۱۵۰ میلیون تومان</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="purpose-card" data-purpose="streaming">
+                                    <div class="purpose-icon">
+                                        <i class="fas fa-video"></i>
+                                    </div>
+                                    <h3>استریم و محتوا</h3>
+                                    <p>مناسب برای استریم‌کنندگان و تولیدکنندگان محتوا</p>
+                                    <ul class="purpose-features">
+                                        <li>پردازنده قوی برای رندر</li>
+                                        <li>رم بالا</li>
+                                        <li>ذخیره‌سازی سریع</li>
+                                    </ul>
+                                    <div class="budget-range">
+                                        <span>بودجه پیشنهادی: ۴۰-۱۲۰ میلیون تومان</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="purpose-card" data-purpose="workstation">
+                                    <div class="purpose-icon">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <h3>ایستگاه کاری</h3>
+                                    <p>برای طراحی، انیمیشن و محاسبات سنگین</p>
+                                    <ul class="purpose-features">
+                                        <li>پردازنده سرور</li>
+                                        <li>کارت گرافیک حرفه‌ای</li>
+                                        <li>رم بسیار بالا</li>
+                                    </ul>
+                                    <div class="budget-range">
+                                        <span>بودجه پیشنهادی: ۸۰-۲۰۰ میلیون تومان</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="purpose-card" data-purpose="office">
+                                    <div class="purpose-icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <h3>اداری و مطالعه</h3>
+                                    <p>برای کارهای روزمره، مطالعه و تماشای فیلم</p>
+                                    <ul class="purpose-features">
+                                        <li>پردازنده مقرون به صرفه</li>
+                                        <li>گرافیک داخلی</li>
+                                        <li>ذخیره‌سازی استاندارد</li>
+                                    </ul>
+                                    <div class="budget-range">
+                                        <span>بودجه پیشنهادی: ۱۵-۴۰ میلیون تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="step-actions">
+                                <button class="btn btn-primary next-step" data-next="2">
+                                    ادامه
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Component Selection -->
+                        <div class="wizard-step" id="step-2">
+                            <div class="step-header">
+                                <h2>قطعات سیستم خود را انتخاب کنید</h2>
+                                <p>هر جزء را با دقت انتخاب نمایید</p>
+                            </div>
+                            
+                            <div class="component-selection">
+                                <div class="components-grid">
+                                    <!-- CPU -->
+                                    <div class="component-card active" data-component="cpu">
+                                        <div class="component-header">
+                                            <div class="component-icon">
+                                                <i class="fas fa-microchip"></i>
+                                            </div>
+                                            <h3>پردازنده (CPU)</h3>
+                                            <span class="component-status selected">انتخاب شده</span>
+                                        </div>
+                                        <div class="component-preview">
+                                            <img src="/assets/img/components/cpu-intel.jpg" alt="Intel Core i9-14900K">
+                                            <div class="component-info">
+                                                <h4>Intel Core i9-14900K</h4>
+                                                <p>24 هسته (8P+16E) - فرکانس تا 6.0GHz</p>
+                                                <span class="component-price">۲۴,۵۰۰,۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-outline change-component">تغییر</button>
+                                    </div>
+                                    
+                                    <!-- Motherboard -->
+                                    <div class="component-card" data-component="motherboard">
+                                        <div class="component-header">
+                                            <div class="component-icon">
+                                                <i class="fas fa-project-diagram"></i>
+                                            </div>
+                                            <h3>مادربرد</h3>
+                                            <span class="component-status">انتخاب نشده</span>
+                                        </div>
+                                        <div class="component-preview empty">
+                                            <i class="fas fa-plus-circle"></i>
+                                            <p>مادربرد انتخاب کنید</p>
+                                        </div>
+                                        <button class="btn btn-outline change-component">انتخاب</button>
+                                    </div>
+                                    
+                                    <!-- GPU -->
+                                    <div class="component-card" data-component="gpu">
+                                        <div class="component-header">
+                                            <div class="component-icon">
+                                                <i class="fas fa-video"></i>
+                                            </div>
+                                            <h3>کارت گرافیک</h3>
+                                            <span class="component-status">انتخاب نشده</span>
+                                        </div>
+                                        <div class="component-preview empty">
+                                            <i class="fas fa-plus-circle"></i>
+                                            <p>کارت گرافیک انتخاب کنید</p>
+                                        </div>
+                                        <button class="btn btn-outline change-component">انتخاب</button>
+                                    </div>
+                                    
+                                    <!-- RAM -->
+                                    <div class="component-card" data-component="ram">
+                                        <div class="component-header">
+                                            <div class="component-icon">
+                                                <i class="fas fa-memory"></i>
+                                            </div>
+                                            <h3>حافظه رم</h3>
+                                            <span class="component-status">انتخاب نشده</span>
+                                        </div>
+                                        <div class="component-preview empty">
+                                            <i class="fas fa-plus-circle"></i>
+                                            <p>رم انتخاب کنید</p>
+                                        </div>
+                                        <button class="btn btn-outline change-component">انتخاب</button>
+                                    </div>
+                                    
+                                    <!-- Storage -->
+                                    <div class="component-card" data-component="storage">
+                                        <div class="component-header">
+                                            <div class="component-icon">
+                                                <i class="fas fa-hdd"></i>
+                                            </div>
+                                            <h3>ذخیره‌سازی</h3>
+                                            <span class="component-status">انتخاب نشده</span>
+                                        </div>
+                                        <div class="component-preview empty">
+                                            <i class="fas fa-plus-circle"></i>
+                                            <p>حافظه انتخاب کنید</p>
+                                        </div>
+                                        <button class="btn btn-outline change-component">انتخاب</button>
+                                    </div>
+                                    
+                                    <!-- PSU -->
+                                    <div class="component-card" data-component="psu">
+                                        <div class="component-header">
+                                            <div class="component-icon">
+                                                <i class="fas fa-bolt"></i>
+                                            </div>
+                                            <h3>منبع تغذیه</h3>
+                                            <span class="component-status">انتخاب نشده</span>
+                                        </div>
+                                        <div class="component-preview empty">
+                                            <i class="fas fa-plus-circle"></i>
+                                            <p>پاور انتخاب کنید</p>
+                                        </div>
+                                        <button class="btn btn-outline change-component">انتخاب</button>
+                                    </div>
+                                    
+                                    <!-- Case -->
+                                    <div class="component-card" data-component="case">
+                                        <div class="component-header">
+                                            <div class="component-icon">
+                                                <i class="fas fa-desktop"></i>
+                                            </div>
+                                            <h3>کیس</h3>
+                                            <span class="component-status">انتخاب نشده</span>
+                                        </div>
+                                        <div class="component-preview empty">
+                                            <i class="fas fa-plus-circle"></i>
+                                            <p>کیس انتخاب کنید</p>
+                                        </div>
+                                        <button class="btn btn-outline change-component">انتخاب</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- System Summary -->
+                                <div class="system-summary">
+                                    <h3>خلاصه سیستم</h3>
+                                    <div class="summary-items">
+                                        <div class="summary-item">
+                                            <span class="item-label">هزینه کل:</span>
+                                            <span class="item-value">۲۴,۵۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span class="item-label">قطعات انتخاب شده:</span>
+                                            <span class="item-value">۱ از ۷</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span class="item-label">سازگاری:</span>
+                                            <span class="item-value compatibility-high">عالی</span>
+                                        </div>
+                                    </div>
+                                    <div class="compatibility-alerts">
+                                        <div class="alert alert-success">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>همه قطعات با هم سازگار هستند</span>
+                                        </div>
+                                    </div>
+                                    <div class="summary-actions">
+                                        <button class="btn btn-outline prev-step" data-prev="1">
+                                            <i class="fas fa-arrow-right"></i>
+                                            قبلی
+                                        </button>
+                                        <button class="btn btn-primary next-step" data-next="3">
+                                            ادامه
+                                            <i class="fas fa-arrow-left"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Final Review -->
+                        <div class="wizard-step" id="step-3">
+                            <div class="step-header">
+                                <h2>بررسی نهایی سیستم</h2>
+                                <p>از سازگاری و انتخاب‌های خود مطمئن شوید</p>
+                            </div>
+                            
+                            <div class="final-review">
+                                <div class="review-system">
+                                    <div class="system-visual">
+                                        <div class="pc-case">
+                                            <div class="component-visual cpu" data-component="cpu">
+                                                <i class="fas fa-microchip"></i>
+                                                <span>CPU</span>
+                                            </div>
+                                            <div class="component-visual gpu" data-component="gpu">
+                                                <i class="fas fa-video"></i>
+                                                <span>GPU</span>
+                                            </div>
+                                            <div class="component-visual ram" data-component="ram">
+                                                <i class="fas fa-memory"></i>
+                                                <span>RAM</span>
+                                            </div>
+                                            <div class="component-visual storage" data-component="storage">
+                                                <i class="fas fa-hdd"></i>
+                                                <span>SSD</span>
+                                            </div>
+                                            <div class="component-visual motherboard" data-component="motherboard">
+                                                <i class="fas fa-project-diagram"></i>
+                                                <span>MB</span>
+                                            </div>
+                                            <div class="component-visual psu" data-component="psu">
+                                                <i class="fas fa-bolt"></i>
+                                                <span>PSU</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="system-specs">
+                                        <h3>مشخصات فنی سیستم</h3>
+                                        <div class="specs-grid">
+                                            <div class="spec-item">
+                                                <span class="spec-label">پردازنده:</span>
+                                                <span class="spec-value">Intel Core i9-14900K</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">مادربرد:</span>
+                                                <span class="spec-value">در حال انتخاب...</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">کارت گرافیک:</span>
+                                                <span class="spec-value">در حال انتخاب...</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">حافظه رم:</span>
+                                                <span class="spec-value">در حال انتخاب...</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">ذخیره‌سازی:</span>
+                                                <span class="spec-value">در حال انتخاب...</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">منبع تغذیه:</span>
+                                                <span class="spec-value">در حال انتخاب...</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">کیس:</span>
+                                                <span class="spec-value">در حال انتخاب...</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="performance-preview">
+                                            <h4>پیش‌بینی عملکرد</h4>
+                                            <div class="performance-bars">
+                                                <div class="performance-bar">
+                                                    <span class="bar-label">گیمینگ</span>
+                                                    <div class="bar-container">
+                                                        <div class="bar-fill" style="width: 85%" data-score="85"></div>
+                                                    </div>
+                                                    <span class="bar-score">۸۵%</span>
+                                                </div>
+                                                <div class="performance-bar">
+                                                    <span class="bar-label">رندرینگ</span>
+                                                    <div class="bar-container">
+                                                        <div class="bar-fill" style="width: 78%" data-score="78"></div>
+                                                    </div>
+                                                    <span class="bar-score">۷۸%</span>
+                                                </div>
+                                                <div class="performance-bar">
+                                                    <span class="bar-label">کارهای روزمره</span>
+                                                    <div class="bar-container">
+                                                        <div class="bar-fill" style="width: 92%" data-score="92"></div>
+                                                    </div>
+                                                    <span class="bar-score">۹۲%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="review-actions">
+                                    <button class="btn btn-outline prev-step" data-prev="2">
+                                        <i class="fas fa-arrow-right"></i>
+                                        بازگشت به انتخاب قطعات
+                                    </button>
+                                    <button class="btn btn-primary next-step" data-next="4">
+                                        مشاهده نتیجه نهایی
+                                        <i class="fas fa-arrow-left"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Results -->
+                        <div class="wizard-step" id="step-4">
+                            <div class="step-header">
+                                <h2>نتیجه اسمبل هوشمند</h2>
+                                <p>عملکرد سیستم و پیشنهادات نهایی</p>
+                            </div>
+                            
+                            <div class="results-container">
+                                <div class="performance-score">
+                                    <div class="score-circle">
+                                        <div class="circle-progress" data-score="87">
+                                            <span class="score-number">۸۷</span>
+                                            <span class="score-label">امتیاز کلی</span>
+                                        </div>
+                                    </div>
+                                    <div class="score-details">
+                                        <h3>سیستم شما آماده است!</h3>
+                                        <p>این سیستم برای گیمینگ حرفه‌ای و کارهای سنگین طراحی شده و عملکرد بسیار خوبی خواهد داشت.</p>
+                                        
+                                        <div class="performance-breakdown">
+                                            <div class="breakdown-item">
+                                                <span class="breakdown-label">گیمینگ 4K</span>
+                                                <div class="breakdown-stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="breakdown-score">۴.۵/۵</span>
+                                            </div>
+                                            <div class="breakdown-item">
+                                                <span class="breakdown-label">رندرینگ</span>
+                                                <div class="breakdown-stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                                <span class="breakdown-score">۴/۵</span>
+                                            </div>
+                                            <div class="breakdown-item">
+                                                <span class="breakdown-label">کارهای چندوظیفگی</span>
+                                                <div class="breakdown-stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="breakdown-score">۵/۵</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recommendations">
+                                    <h3>پیشنهادات تکمیلی</h3>
+                                    <div class="recommendation-cards">
+                                        <div class="recommendation-card">
+                                            <div class="rec-icon">
+                                                <i class="fas fa-wind"></i>
+                                            </div>
+                                            <h4>خنک‌کننده مایع</h4>
+                                            <p>برای عملکرد بهتر پردازنده پیشنهاد می‌شود</p>
+                                            <button class="btn btn-outline btn-sm">مشاهده محصولات</button>
+                                        </div>
+                                        <div class="recommendation-card">
+                                            <div class="rec-icon">
+                                                <i class="fas fa-fan"></i>
+                                            </div>
+                                            <h4>فن اضافی</h4>
+                                            <p>برای گردش هوای بهتر در کیس</p>
+                                            <button class="btn btn-outline btn-sm">مشاهده محصولات</button>
+                                        </div>
+                                        <div class="recommendation-card">
+                                            <div class="rec-icon">
+                                                <i class="fas fa-plug"></i>
+                                            </div>
+                                            <h4>محافظ برق</h4>
+                                            <p>برای محافظت از قطعات در برابر نوسانات</p>
+                                            <button class="btn btn-outline btn-sm">مشاهده محصولات</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="final-actions">
+                                    <div class="action-buttons">
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            افزودن همه به سبد خرید
+                                        </button>
+                                        <button class="btn btn-outline">
+                                            <i class="fas fa-file-pdf"></i>
+                                            ذخیره مشخصات فنی
+                                        </button>
+                                        <button class="btn btn-outline restart-wizard">
+                                            <i class="fas fa-redo"></i>
+                                            شروع مجدد
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Component Selection Modal -->
+        <div class="modal component-modal" id="component-modal" aria-hidden="true">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modal-title">انتخاب پردازنده</h3>
+                    <button class="close-modal" aria-label="بستن پنجره">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="component-filters">
+                        <div class="filter-group">
+                            <label for="brand-filter">برند:</label>
+                            <select id="brand-filter" class="filter-select">
+                                <option value="all">همه</option>
+                                <option value="intel">Intel</option>
+                                <option value="amd">AMD</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="price-filter">محدوده قیمت:</label>
+                            <select id="price-filter" class="filter-select">
+                                <option value="all">همه</option>
+                                <option value="low">کمتر از ۱۰ میلیون</option>
+                                <option value="medium">۱۰-۲۵ میلیون</option>
+                                <option value="high">بیشتر از ۲۵ میلیون</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="components-list">
+                        <!-- Components will be loaded here by JavaScript -->
+                        <div class="component-item selected">
+                            <div class="component-image">
+                                <img src="/assets/img/components/cpu-intel.jpg" alt="Intel Core i9-14900K">
+                            </div>
+                            <div class="component-details">
+                                <h4>Intel Core i9-14900K</h4>
+                                <p>24 هسته (8P+16E) - فرکانس تا 6.0GHz - کش 36MB</p>
+                                <div class="component-specs">
+                                    <span class="spec">سوکت: LGA 1700</span>
+                                    <span class="spec">TDP: 125W</span>
+                                </div>
+                            </div>
+                            <div class="component-actions">
+                                <span class="component-price">۲۴,۵۰۰,۰۰۰ تومان</span>
+                                <button class="btn btn-primary btn-sm select-component">انتخاب شده</button>
+                            </div>
+                        </div>
+                        
+                        <div class="component-item">
+                            <div class="component-image">
+                                <img src="/assets/img/components/cpu-amd.jpg" alt="AMD Ryzen 9 7950X">
+                            </div>
+                            <div class="component-details">
+                                <h4>AMD Ryzen 9 7950X</h4>
+                                <p>16 هسته - 32 رشته - فرکانس تا 5.7GHz - کش 80MB</p>
+                                <div class="component-specs">
+                                    <span class="spec">سوکت: AM5</span>
+                                    <span class="spec">TDP: 170W</span>
+                                </div>
+                            </div>
+                            <div class="component-actions">
+                                <span class="component-price">۲۲,۸۰۰,۰۰۰ تومان</span>
+                                <button class="btn btn-outline btn-sm select-component">انتخاب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-overlay" id="component-overlay"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="/assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </div>
+                    <p class="footer-description">
+                        AquaMarket - پیشرو در ارائه راه‌حل‌های هوشمند اسمبل کامپیوتر و قطعات گیمینگ
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="اینستاگرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="تلگرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" aria-label="یوتیوب">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="توییتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">لینک‌های مفید</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="product.html">محصولات</a></li>
+                        <li><a href="assemble.html">اسمبل هوشمند</a></li>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="tel:02112345678">تماس با ما</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">دسته‌بندی‌ها</h3>
+                    <ul class="footer-links">
+                        <li><a href="/category/cpu">پردازنده</a></li>
+                        <li><a href="/category/gpu">کارت گرافیک</a></li>
+                        <li><a href="/category/motherboard">مادربرد</a></li>
+                        <li><a href="/category/ram">حافظه رم</a></li>
+                        <li><a href="/category/storage">ذخیره‌سازی</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">پشتیبانی</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>۰۲۱-۱۲۳۴۵۶۷۸</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@aquamarket.ir</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>پشتیبانی ۲۴/۷</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>کلیه حقوق این وب‌سایت متعلق به AquaMarket می‌باشد © 1404</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="/sitemap">نقشه سایت</a>
+                    <a href="/privacy-terms.html">قوانین و مقررات</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <button class="floating-btn back-to-top" aria-label="بازگشت به بالا">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+    <script src="js/assemble.js" defer></script>
+</body>
+</html>

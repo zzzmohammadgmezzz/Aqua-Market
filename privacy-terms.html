@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حریم خصوصی و قوانین - AquaMarket</title>
+    <meta name="description" content="صفحه قوانین و مقررات و حریم خصوصی AquaMarket - اطلاعات کامل درباره نحوه استفاده از سایت و حفظ حریم شخصی شما">
+    <meta name="keywords" content="حریم خصوصی, قوانین, مقررات, AquaMarket, شرایط استفاده">
+    <meta name="author" content="AquaMarket">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="حریم خصوصی و قوانین - AquaMarket">
+    <meta property="og:description" content="صفحه قوانین و مقررات و حریم خصوصی AquaMarket">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aquamarket.ir/privacy-terms.html">
+    <meta property="og:image" content="/assets/img/og-image.jpg">
+    
+    <!-- Persian Font (Local) -->
+    <link rel="stylesheet" href="assets/fonts/vazirmatn-v33.003/Vazirmatn-font-face.css">
+    
+    <!-- Icons (Local) -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Additional Styles for Privacy & Terms Page */
+        .privacy-terms-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .privacy-terms-nav {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .privacy-terms-nav a {
+            padding: 10px 20px;
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            color: var(--text-secondary);
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+        
+        .privacy-terms-nav a:hover,
+        .privacy-terms-nav a.active {
+            color: var(--accent);
+            border-color: var(--accent);
+            background-color: rgba(0, 207, 207, 0.05);
+        }
+        
+        .content-section {
+            margin-bottom: 50px;
+            animation: fadeIn 0.6s ease;
+        }
+        
+        .content-section h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
+        }
+        
+        .content-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 100px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+        
+        .content-section h3 {
+            color: var(--text-primary);
+            margin: 25px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        .content-section p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+        
+        .content-section ul, .content-section ol {
+            margin: 15px 0;
+            padding-right: 20px;
+            color: var(--text-secondary);
+        }
+        
+        .content-section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .highlight-box {
+            background-color: rgba(0, 207, 207, 0.05);
+            border: 1px solid rgba(0, 207, 207, 0.2);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .highlight-box h4 {
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .last-updated {
+            background-color: var(--bg-card);
+            padding: 15px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .contact-support {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            margin-top: 40px;
+        }
+        
+        .contact-support h3 {
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .privacy-terms-nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .privacy-terms-nav a {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button class="icon-btn menu-toggle" aria-label="منو" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <form class="search-form">
+                        <input type="text" placeholder="جستجوی محصولات..." aria-label="جستجوی محصولات">
+                        <button type="submit" aria-label="جستجو">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <button class="icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="icon-btn cart-btn" aria-label="سبد خرید" aria-expanded="false" aria-controls="cart-panel">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    
+                    <button class="icon-btn account-btn" aria-label="حساب کاربری" aria-expanded="false" aria-controls="account-modal">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="product.html" class="nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="nav-link">تخفیف‌ها</a></li>
+                    <li><a href="assemble.html" class="nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="nav-link">بلاگ</a></li>
+                    <li><a href="about.html" class="nav-link">درباره ما</a></li>
+                    <li><a href="tel:02112345678" class="nav-link">تماس</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <img src="assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                </div>
+                <button class="close-mobile-menu" aria-label="بستن منو">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav" aria-label="منوی موبایل">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="mobile-nav-link">خانه</a></li>
+                    <li><a href="product.html" class="mobile-nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="mobile-nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="mobile-nav-link">تخفیف‌ها</a></li>
+                    <li><a href="assemble.html" class="mobile-nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="mobile-nav-link">بلاگ</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">درباره ما</a></li>
+                    <li><a href="tel:02112345678" class="mobile-nav-link">تماس</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu-footer">
+                <div class="mobile-header-icons">
+                    <button class="mobile-icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-icon-btn cart-btn" aria-label="سبد خرید">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    
+                    <button class="mobile-icon-btn account-btn" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="مسیر">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html">خانه</a></li>
+                    <li aria-current="page">حریم خصوصی و قوانین</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="privacy-terms-container">
+                <h1 class="section-title">حریم خصوصی و قوانین مقررات</h1>
+                
+                <div class="privacy-terms-nav">
+                    <a href="#privacy" class="active">حریم خصوصی</a>
+                    <a href="#terms">قوانین و مقررات</a>
+                </div>
+                
+                <!-- Privacy Policy Section -->
+                <section id="privacy" class="content-section">
+                    <h2>سیاست حفظ حریم خصوصی</h2>
+                    
+                    <p>در AquaMarket، حفظ حریم خصوصی شما یکی از اولویت‌های اصلی ماست. این سیاست حریم خصوصی توضیح می‌دهد که چگونه اطلاعات شخصی شما را جمع‌آوری، استفاده و محافظت می‌کنیم.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>توجه:</h4>
+                        <p>با استفاده از وبسایت AquaMarket، شما موافقت خود را با شرایط این سیاست حریم خصوصی اعلام می‌کنید.</p>
+                    </div>
+                    
+                    <h3>اطلاعاتی که جمع‌آوری می‌کنیم</h3>
+                    <p>ما ممکن است انواع مختلفی از اطلاعات را جمع‌آوری کنیم، از جمله:</p>
+                    <ul>
+                        <li><strong>اطلاعات شخصی:</strong> نام، آدرس ایمیل، شماره تلفن، آدرس پستی</li>
+                        <li><strong>اطلاعات پرداخت:</strong> جزئیات کارت اعتباری یا سایر روش‌های پرداخت (این اطلاعات مستقیماً توسط درگاه‌های پرداخت امن پردازش می‌شوند)</li>
+                        <li><strong>اطلاعات فنی:</strong> آدرس IP، نوع مرورگر، سیستم عامل، صفحات بازدید شده، مدت زمان بازدید</li>
+                        <li><strong>اطلاعات موقعیت مکانی:</strong> در صورت موافقت شما، اطلاعات موقعیت جغرافیایی شما را جمع‌آوری می‌کنیم</li>
+                    </ul>
+                    
+                    <h3>چگونه از اطلاعات شما استفاده می‌کنیم</h3>
+                    <p>ما از اطلاعات جمع‌آوری شده برای اهداف زیر استفاده می‌کنیم:</p>
+                    <ol>
+                        <li>ارائه و بهبود خدمات و محصولات</li>
+                        <li>پردازش سفارشات و تراکنش‌ها</li>
+                        <li>ارتباط با شما در مورد سفارشات، محصولات، خدمات و تبلیغات</li>
+                        <li>شخصی‌سازی تجربه کاربری شما</li>
+                        <li>تحلیل و بهبود عملکرد وبسایت</li>
+                        <li>رعایت الزامات قانونی</li>
+                    </ol>
+                    
+                    <h3>اشتراک‌گذاری اطلاعات</h3>
+                    <p>ما اطلاعات شخصی شما را به اشخاص ثالث نمی‌فروشیم، معامله نمی‌کنیم یا انتقال نمی‌دهیم، مگر در موارد زیر:</p>
+                    <ul>
+                        <li>با ارائه‌دهندگان خدمات معتبر که به ما در اداره کسب‌وکار کمک می‌کنند، به شرطی که این طرف‌ها موافقت کنند که این اطلاعات محرمانه نگه داشته شوند</li>
+                        <li>هنگامی که ما معتقدیم انتشار اطلاعات برای رعایت قانون، اجرای سیاست‌های سایت ما، یا محافظت از حقوق، اموال یا امنیت خود یا دیگران ضروری است</li>
+                        <li>در ارتباط با ادغام، خرید یا فروش دارایی‌ها، که در آن اطلاعات شخصی ممکن است به عنوان یکی از دارایی‌های منتقل شده در نظر گرفته شود</li>
+                    </ul>
+                    
+                    <h3>کوکی‌ها و فناوری‌های ردیابی</h3>
+                    <p>ما از کوکی‌ها و فناوری‌های ردیابی مشابه برای بهبود تجربه مرور شما، تجزیه و تحلیل ترافیک سایت و هدف‌گیری تبلیغات استفاده می‌کنیم. شما می‌توانید تنظیمات مرورگر خود را برای رد کوکی‌ها تغییر دهید، اما این ممکن است بر عملکرد برخی از ویژگی‌های سایت تأثیر بگذارد.</p>
+                    
+                    <h3>امنیت داده‌ها</h3>
+                    <p>ما از اقدامات امنیتی مختلفی برای محافظت از اطلاعات شخصی شما در برابر دسترسی، استفاده یا افشای غیرمجاز استفاده می‌کنیم. این اقدامات شامل پروتکل‌های امنیتی فیزیکی، الکترونیکی و رویه‌های مدیریتی است.</p>
+                    
+                    <h3>حقوق شما</h3>
+                    <p>شما حق دارید:</p>
+                    <ul>
+                        <li>به اطلاعات شخصی که درباره شما نگهداری می‌کنیم دسترسی داشته باشید</li>
+                        <li>درخواست تصحیح اطلاعات نادرست یا ناقص</li>
+                        <li>درخواست حذف اطلاعات شخصی خود در شرایط خاص</li>
+                        <li>مخالفت با پردازش اطلاعات شخصی خود</li>
+                        <li>درخواست محدود کردن پردازش اطلاعات شخصی خود</li>
+                        <li>حق انتقال پذیری داده‌ها</li>
+                    </ul>
+                    
+                    <h3>تغییرات در سیاست حریم خصوصی</h3>
+                    <p>ما ممکن است این سیاست حریم خصوصی را به روز کنیم. هرگونه تغییر در این صفحه منتشر خواهد شد و در صورت تغییرات قابل توجه، ممکن است از طریق ایمیل به شما اطلاع‌رسانی کنیم.</p>
+                    
+                    <h3>تماس با ما</h3>
+                    <p>اگر سؤالی در مورد این سیاست حریم خصوصی دارید، لطفاً با ما تماس بگیرید:</p>
+                    <p>ایمیل: privacy@aquamarket.ir<br>
+                    تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+                </section>
+                
+                <!-- Terms and Conditions Section -->
+                <section id="terms" class="content-section">
+                    <h2>قوانین و مقررات استفاده از خدمات</h2>
+                    
+                    <p>با استفاده از وبسایت AquaMarket، شما موافقت می‌کنید که توسط این شرایط و ضوابط مقید شوید. لطفاً قبل از استفاده از سایت، این شرایط را به دقت مطالعه کنید.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>توجه:</h4>
+                        <p>ما حق داریم این شرایط را در هر زمان بدون اطلاع قبلی تغییر دهیم. ادامه استفاده از سایت پس از اعمال تغییرات به منزله پذیرش شرایط جدید است.</p>
+                    </div>
+                    
+                    <h3>حساب کاربری</h3>
+                    <p>برای دسترسی به برخی ویژگی‌های سایت، ممکن است نیاز به ایجاد حساب کاربری داشته باشید. شما موظف هستید:</p>
+                    <ul>
+                        <li>اطلاعات دقیق، به روز و کامل ارائه دهید</li>
+                        <li>رمز عبور خود را محرمانه نگه دارید</li>
+                        <li>بلافاصله هرگونه استفاده غیرمجاز از حساب خود را به ما گزارش دهید</li>
+                        <li>مسئولیت تمام فعالیت‌هایی که تحت حساب شما رخ می‌دهد را بپذیرید</li>
+                    </ul>
+                    
+                    <h3>خرید و سفارش</h3>
+                    <p>قوانین مربوط به فرآیند خرید و سفارش:</p>
+                    <ol>
+                        <li>تمام سفارش‌ها مشروط به تأیید موجودی و قیمت است</li>
+                        <li>قیمت‌های نمایش داده شده ممکن است بدون اطلاع قبلی تغییر کنند</li>
+                        <li>ما حق رد یا لغو هر سفارشی را به دلایلی از جمله محدودیت‌های موجودی، خطا در قیمت‌گذاری یا مشکوک بودن به تقلب محفوظ می‌داریم</li>
+                        <li>پرداخت باید قبل از ارسال کالا کامل شود</li>
+                        <li>کالاها معمولاً طی 3-7 روز کاری پس از تأیید پرداخت ارسال می‌شوند</li>
+                    </ol>
+                    
+                    <h3>سیاست بازگشت و مرجوعی</h3>
+                    <p>ما می‌خواهیم از رضایت شما از خرید خود اطمینان حاصل کنیم. سیاست بازگشت ما به شرح زیر است:</p>
+                    <ul>
+                        <li>شما 7 روز فرصت دارید تا کالای خریداری شده را بازگردانید</li>
+                        <li>کالا باید در شرایط اصلی و بدون استفاده بازگردانده شود</li>
+                        <li>هزینه حمل و نقل بازگشت به عهده مشتری است</li>
+                        <li>پس از دریافت و بررسی کالا، مبلغ بازگشت طی 14 روز کاری پرداخت می‌شود</li>
+                        <li>کالاهای شخصی‌سازی شده یا دیجیتال قابل بازگشت نیستند</li>
+                    </ul>
+                    
+                    <h3>حقوق مالکیت فکری</h3>
+                    <p>تمام محتوای موجود در این وبسایت، از جمله متن، گرافیک، لوگو، آیکون‌ها، تصاویر، کلیپ‌های صوتی، دانلودهای دیجیتال و نرم‌افزار، مالکیت AquaMarket یا تأمین‌کنندگان محتوا است و توسط قوانین بین‌المللی کپی‌رایت محافظت می‌شود.</p>
+                    
+                    <h3>استفاده مجاز</h3>
+                    <p>شما مجاز به استفاده از سایت فقط برای اهداف قانونی و مطابق با این شرایط هستید. شما موافقت می‌کنید که:</p>
+                    <ul>
+                        <li>از سایت به روشی که ممکن است به عملکرد سایت آسیب برساند یا دسترسی دیگران را مختل کند استفاده نکنید</li>
+                        <li>در فعالیت‌های غیرقانونی یا کلاهبرداری شرکت نکنید</li>
+                        <li>هرگونه محتوای مخرب از جمله ویروس یا کد مخرب دیگر را آپلود یا منتشر نکنید</li>
+                        <li>از هرگونه سیستم یا نرم‌افزار برای استخراج داده از سایت استفاده نکنید</li>
+                    </ul>
+                    
+                    <h3>مسئولیت محدود</h3>
+                    <p>AquaMarket یا کارکنان آن در قبال هرگونه خسارت مستقیم، غیرمستقیم، اتفاقی، ویژه یا تبعی ناشی از استفاده یا عدم توانایی در استفاده از سایت مسئولیتی ندارند.</p>
+                    
+                    <h3>قانون حاکم</h3>
+                    <p>این شرایط توسط قوانین ایران تفسیر و حاکم خواهد شد و شما به طور قطع صلاحیت انحصاری دادگاه‌های ایران را می‌پذیرید.</p>
+                    
+                    <h3>تفکیک‌پذیری</h3>
+                    <p>اگر هر یک از مقررات این شرایط غیرقابل اجرا یا نامعتبر باشد، آن مقرره تا حدی که توسط قانون قابل اجرا باشد اجرا می‌شود و مقررات باقی‌مانده به طور کامل به قوت خود باقی می‌ماند.</p>
+                    
+                    <h3>توقف دسترسی</h3>
+                    <p>ما حق داریم به صلاحدید خود و بدون اطلاع قبلی یا مسئولیت، دسترسی شما به سایت را به هر دلیلی از جمله نقض این شرایط متوقف کنیم.</p>
+                </section>
+                
+                <div class="contact-support">
+                    <h3>سوالی دارید؟</h3>
+                    <p>اگر در مورد سیاست حریم خصوصی یا شرایط استفاده سوالی دارید، لطفاً با تیم پشتیبانی ما تماس بگیرید.</p>
+                    <a href="tel:02112345678" class="btn btn-primary">تماس با پشتیبانی</a>
+                </div>
+                
+                <div class="last-updated">
+                    <p><strong>آخرین به‌روزرسانی:</strong> ۱۵ تیر ۱۴۰۳</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </div>
+                    <p class="footer-description">
+                        AquaMarket بزرگترین فروشگاه آنلاین قطعات کامپیوتر و تجهیزات گیمینگ در ایران با بیش از ۱۰ سال سابقه درخشان
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="اینستاگرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="تلگرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" aria-label="یوتیوب">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="توییتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">لینک‌های مفید</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="product.html">محصولات</a></li>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="tel:02112345678">تماس با ما</a></li>
+                        <li><a href="privacy-terms.html">حریم خصوصی و قوانین</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">اطلاعات تماس</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>تهران، خیابان ولیعصر، پلاک ۱۲۳۴</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span><a href="tel:02112345678">۰۲۱-۱۲۳۴۵۶۷۸</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@aquamarket.ir</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">خبرنامه</h3>
+                    <p class="newsletter-text">برای دریافت جدیدترین تخفیف‌ها و محصولات در خبرنامه ما عضو شوید</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="ایمیل خود را وارد کنید" aria-label="ایمیل برای خبرنامه">
+                        <button type="submit" class="btn btn-primary">عضویت</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>کلیه حقوق این وب‌سایت متعلق به AquaMarket می‌باشد © 1404</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="sitemap.html">نقشه سایت</a>
+                    <a href="privacy-terms.html">حریم خصوصی و قوانین</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <button class="floating-btn back-to-top" aria-label="بازگشت به بالا">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <button class="floating-btn support-btn" aria-label="پشتیبانی آنلاین">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Cart Side Panel -->
+    <div class="side-panel cart-panel" id="cart-panel" aria-hidden="true">
+        <div class="panel-header">
+            <h3>سبد خرید شما</h3>
+            <button class="close-panel" aria-label="بستن سبد خرید">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="panel-content">
+            <div class="cart-items">
+                <!-- Cart items will be added dynamically -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>سبد خرید شما خالی است</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="cart-total">
+                <span>جمع کل:</span>
+                <span class="total-price">۰ تومان</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">ادامه فرآیند خرید</button>
+        </div>
+    </div>
+    <div class="panel-overlay" id="cart-overlay"></div>
+
+    <!-- Account Modal -->
+    <div class="modal account-modal" id="account-modal" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>ورود / ثبت‌نام</h3>
+                <button class="close-modal" aria-label="بستن پنجره">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="account-form">
+                    <div class="form-group">
+                        <label for="email-phone">ایمیل یا شماره موبایل</label>
+                        <input type="text" id="email-phone" placeholder="example@email.com یا 09xxxxxxxxx">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">رمز عبور</label>
+                        <input type="password" id="password" placeholder="رمز عبور خود را وارد کنید">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">ورود</button>
+                    <div class="form-footer">
+                        <p>حساب کاربری ندارید؟ <a href="register.html" class="register-link">ثبت‌نام کنید</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-overlay" id="account-overlay"></div>
+    </div>
+
+    <!-- Support Chat Modal -->
+    <div class="modal chat-modal" id="chat-modal" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>پشتیبانی آنلاین</h3>
+                <button class="close-modal" aria-label="بستن پنجره چت">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="chat-messages">
+                    <div class="message received">
+                        <div class="message-content">
+                            <p>سلام! به پشتیبانی AquaMarket خوش آمدید. چطور می‌تونم کمکتون کنم؟</p>
+                        </div>
+                        <span class="message-time">۱۰:۳۰</span>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="پیام خود را بنویسید..." aria-label="پیام برای پشتیبانی">
+                    <button class="send-btn" aria-label="ارسال پیام">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-overlay" id="chat-overlay"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+    
+    <script>
+        // Additional JavaScript for Privacy & Terms Page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('.privacy-terms-nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Update active nav link
+                        document.querySelectorAll('.privacy-terms-nav a').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                        
+                        // Scroll to target
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Update active nav link based on scroll position
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('.content-section');
+                const navLinks = document.querySelectorAll('.privacy-terms-nav a');
+                
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.scrollY >= (sectionTop - 150)) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + currentSection) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaMarket - فروشگاه تخصصی قطعات کامپیوتر و گیمینگ</title>
+    <meta name="description" content="AquaMarket - مرجع تخصصی قطعات کامپیوتر، گیمینگ و تکنولوژی با بهترین قیمت و گارانتی">
+    
+    <!-- Persian Font -->
+    <link rel="stylesheet" href="assets/fonts/vazirmatn-v33.003/Vazirmatn-font-face.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button type="button" class="icon-btn menu-toggle" aria-label="منو">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <form class="search-form" id="search-form">
+                        <input type="text" id="search-input" placeholder="جستجوی محصولات..." aria-label="جستجوی محصولات" autocomplete="off">
+                        <button type="submit" aria-label="جستجو">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <button type="button" class="icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun" style="display: none;"></i>
+                    </button>
+                    
+                    <button type="button" class="icon-btn cart-btn" aria-label="سبد خرید">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    
+                    <a href="account.html" class="icon-btn account-btn" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">خانه</a></li>
+                    <li><a href="product.html" class="nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="nav-link">تخفیف‌ها</a></li>
+                    <li><a href="assemble.html" class="nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="nav-link">مجله آکوامگ</a></li>
+                    <li><a href="about.html" class="nav-link">درباره ما</a></li>
+                    <li><a href="tel:1234" class="nav-link">تماس</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <img src="assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                </div>
+                <button type="button" class="close-mobile-menu" aria-label="بستن منو">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav" aria-label="منوی موبایل">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="mobile-nav-link active">خانه</a></li>
+                    <li><a href="product.html" class="mobile-nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="mobile-nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="mobile-nav-link">تخفیف‌ها</a></li>
+                    <li><a href="assemble.html" class="mobile-nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="mobile-nav-link">مجله آکوامگ</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">درباره ما</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">تماس</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu-footer">
+                <div class="mobile-header-icons">
+                    <button type="button" class="mobile-icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun" style="display: none;"></i>
+                    </button>
+                    
+                    <button type="button" class="mobile-icon-btn cart-btn" aria-label="سبد خرید">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    
+                    <a href="account.html" class="mobile-icon-btn account-btn" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="مسیر">
+                <ol class="breadcrumb-list">
+                    <li aria-current="page">خانه</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <!-- Hero Slider -->
+        <section class="hero-slider">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="slide active">
+                        <img src="assets/img/redragon-new.jpg" alt="جدیدترین محصولات گیمینگ" loading="lazy">
+                        <div class="slide-content">
+                            <h1>جدیدترین محصولات بازار</h1>
+                            <p>اولین نفری باشید که از جدیدترین تکنولوژی‌ها و محصولات گیمینگ باورنکردنی مطلع می‌شوید</p>
+                            <div class="slide-actions">
+                                <a href="product.html" class="btn btn-primary">مشاهده محصولات</a>
+                                <a href="assemble.html" class="btn btn-outline">اسمبل هوشمند</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <img src="assets/img/black-fraiday-4-copy-2-1.jpg" alt="تخفیف‌های ویژه" loading="lazy">
+                        <div class="slide-content">
+                            <h1>تخفیف‌های ویژه</h1>
+                            <p>فرصت استثنایی برای خرید با بهترین قیمت‌ها و بالاترین تخفیف‌ها</p>
+                            <div class="slide-actions">
+                                <a href="product.html?filter=discounts" class="btn btn-primary">مشاهده تخفیف‌ها</a>
+                                <a href="product.html?filter=bestsellers" class="btn btn-outline">پرفروش‌ها</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <img src="assets/img/4-copy.jpg" alt="سیستم‌های اسمبل شده" loading="lazy">
+                        <div class="slide-content">
+                            <h1>سیستم‌های گیمینگ حرفه‌ای</h1>
+                            <p>آماده بازی با بهترین کیفیت و بالاترین عملکرد با سیستم‌های اسمبل شده توسط متخصصین</p>
+                            <div class="slide-actions">
+                                <a href="assemble.html" class="btn btn-primary">اسمبل هوشمند</a>
+                                <a href="blog.html" class="btn btn-outline">مقالات تخصصی</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slider Controls -->
+                <button class="slider-control prev" aria-label="اسلاید قبلی">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <button class="slider-control next" aria-label="اسلاید بعدی">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <!-- Slider Dots -->
+                <div class="slider-dots">
+                    <button class="dot active" aria-label="اسلاید 1"></button>
+                    <button class="dot" aria-label="اسلاید 2"></button>
+                    <button class="dot" aria-label="اسلاید 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="section categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">دسته‌بندی محصولات</h2>
+                    <a href="product.html" class="view-all">
+                        مشاهده همه
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                
+                <div class="categories-grid">
+                    <!-- Category 1 -->
+                    <a href="product.html?category=cpu" class="category-card">
+                        <div class="category-icon">
+                            <img src="assets/img/pngtree-computer-cpu-3d-png-image_15291194.png" alt="پردازنده" loading="lazy">
+                        </div>
+                        <h3 class="category-title">پردازنده</h3>
+                    </a>
+                    
+                    <!-- Category 2 -->
+                    <a href="product.html?category=gpu" class="category-card">
+                        <div class="category-icon">
+                            <img src="assets/img/Graphics-Card-PNG-Transparent-HD-Photo.png" alt="کارت گرافیک" loading="lazy">
+                        </div>
+                        <h3 class="category-title">کارت گرافیک</h3>
+                    </a>
+                    
+                    <!-- Category 3 -->
+                    <a href="product.html?category=ram" class="category-card">
+                        <div class="category-icon">
+                            <img src="assets/img/pngtree-ram-rgb-pc-komputer-gaming-vektor-png-image_7503179.png" alt="حافظه رم" loading="lazy">
+                        </div>
+                        <h3 class="category-title">حافظه رم</h3>
+                    </a>
+                    
+                    <!-- Category 4 -->
+                    <a href="product.html?category=motherboard" class="category-card">
+                        <div class="category-icon">
+                            <img src="assets/img/ROG X670E-E_03.png" alt="مادربرد" loading="lazy">
+                        </div>
+                        <h3 class="category-title">مادربرد</h3>
+                    </a>
+                    
+                    <!-- Category 5 -->
+                    <a href="product.html?category=storage" class="category-card">
+                        <div class="category-icon">
+                            <img src="assets/img/1_XLR8-CS3140-SSD-M.2-NVME-fr.png" alt="حافظه ذخیره‌سازی" loading="lazy">
+                        </div>
+                        <h3 class="category-title">حافظه ذخیره‌سازی</h3>
+                    </a>
+                    
+                    <!-- Category 6 -->
+                    <a href="product.html?category=cooling" class="category-card">
+                        <div class="category-icon">
+                            <img src="assets/img/kv-pd.png" alt="سیستم خنک‌کننده" loading="lazy">
+                        </div>
+                        <h3 class="category-title">سیستم خنک‌کننده</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newest Products -->
+        <section class="section newest-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">جدیدترین محصولات</h2>
+                    <a href="product.html" class="view-all">
+                        مشاهده همه
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <a href="product-rtx4080.html">
+                                <img src="assets/img/1-41.webp" alt="کارت گرافیک RTX 4080" loading="lazy">
+                            </a>
+                            <div class="product-actions">
+                                <button type="button" class="action-btn like-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button type="button" class="action-btn compare-btn" aria-label="مقایسه محصول">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                            </div>
+                            <div class="discount-badge">۱۵٪</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">
+                                <a href="product-rtx4080.html">کارت گرافیک NVIDIA GeForce RTX 4080 16GB</a>
+                            </h3>
+                            <div class="price-row">
+                                <span class="old-price">۶۵,۰۰۰,۰۰۰ تومان</span>
+                                <span class="new-price">۵۵,۰۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <div class="timer">
+                                <i class="fas fa-clock"></i>
+                                <span class="timer-text">02:15:33</span>
+                            </div>
+                            <button type="button" class="btn btn-primary add-to-cart" data-product="1">
+                                <i class="fas fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/1715172623049_769.webp" alt="پردازنده Core i9" loading="lazy">
+                            <div class="product-actions">
+                                <button type="button" class="action-btn like-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button type="button" class="action-btn compare-btn" aria-label="مقایسه محصول">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">پردازنده Intel Core i9-14900K</h3>
+                            <div class="price-row">
+                                <span class="new-price">۳۲,۰۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <button type="button" class="btn btn-primary add-to-cart" data-product="2">
+                                <i class="fas fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/G.Skill-Trident-Z5-RGB-32GB-Dual-6400MHz-CL32-Black.webp" alt="رم G.Skill" loading="lazy">
+                            <div class="product-actions">
+                                <button type="button" class="action-btn like-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button type="button" class="action-btn compare-btn" aria-label="مقایسه محصول">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                            </div>
+                            <div class="discount-badge">۱۰٪</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">حافظه رم G.Skill Trident Z5 RGB 32GB DDR5</h3>
+                            <div class="price-row">
+                                <span class="old-price">۸,۵۰۰,۰۰۰ تومان</span>
+                                <span class="new-price">۷,۶۵۰,۰۰۰ تومان</span>
+                            </div>
+                            <div class="timer">
+                                <i class="fas fa-clock"></i>
+                                <span class="timer-text">01:45:22</span>
+                            </div>
+                            <button type="button" class="btn btn-primary add-to-cart" data-product="3">
+                                <i class="fas fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/1715333623699_848.webp" alt="مادربرد ASUS" loading="lazy">
+                            <div class="product-actions">
+                                <button type="button" class="action-btn like-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button type="button" class="action-btn compare-btn" aria-label="مقایسه محصول">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">مادربرد ASUS ROG Maximus Z790 Hero</h3>
+                            <div class="price-row">
+                                <span class="new-price">۲۸,۰۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <button type="button" class="btn btn-primary add-to-cart" data-product="4">
+                                <i class="fas fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Products -->
+        <section class="section recommended-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">پیشنهادی برای شما</h2>
+                    <a href="product.html" class="view-all">
+                        مشاهده همه
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/o11-evo-rgb-black-2.webp" alt="کیس گیمینگ" loading="lazy">
+                            <div class="product-actions">
+                                <button type="button" class="action-btn like-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button type="button" class="action-btn compare-btn" aria-label="مقایسه محصول">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                            </div>
+                            <div class="discount-badge">۱۲٪</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">کیس گیمینگ Lian Li O11 Dynamic EVO</h3>
+                            <div class="price-row">
+                                <span class="old-price">۱۲,۰۰۰,۰۰۰ تومان</span>
+                                <span class="new-price">۱۰,۵۶۰,۰۰۰ تومان</span>
+                            </div>
+                            <div class="timer">
+                                <i class="fas fa-clock"></i>
+                                <span class="timer-text">03:30:45</span>
+                            </div>
+                            <button type="button" class="btn btn-primary add-to-cart" data-product="5">
+                                <i class="fas fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/RM1000x_01.avif" alt="پاور Corsair" loading="lazy">
+                            <div class="product-actions">
+                                <button type="button" class="action-btn like-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button type="button" class="action-btn compare-btn" aria-label="مقایسه محصول">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">پاور Corsair RM1000x 1000W 80 Plus Gold</h3>
+                            <div class="price-row">
+                                <span class="new-price">۱۱,۵۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <button type="button" class="btn btn-primary add-to-cart" data-product="6">
+                                <i class="fas fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/1-84.webp" alt="خنک‌کننده مایع" loading="lazy">
+                            <div class="product-actions">
+                                <button type="button" class="action-btn like-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button type="button" class="action-btn compare-btn" aria-label="مقایسه محصول">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                            </div>
+                            <div class="discount-badge">۸٪</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">خنک‌کننده مایع NZXT Kraken Z73 RGB</h3>
+                            <div class="price-row">
+                                <span class="old-price">۱۵,۰۰۰,۰۰۰ تومان</span>
+                                <span class="new-price">۱۳,۸۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <div class="timer">
+                                <i class="fas fa-clock"></i>
+                                <span class="timer-text">04:15:10</span>
+                            </div>
+                            <button type="button" class="btn btn-primary add-to-cart" data-product="7">
+                                <i class="fas fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/1728229073801_444.webp" alt="SSD Samsung" loading="lazy">
+                            <div class="product-actions">
+                                <button type="button" class="action-btn like-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button type="button" class="action-btn compare-btn" aria-label="مقایسه محصول">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">حافظه SSD Samsung 990 Pro 2TB NVMe</h3>
+                            <div class="price-row">
+                                <span class="new-price">۸,۹۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <button type="button" class="btn btn-primary add-to-cart" data-product="8">
+                                <i class="fas fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bestsellers Section -->
+        <section class="section bestsellers-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">پرفروش‌ترین محصولات</h2>
+                    <a href="product.html?filter=bestsellers" class="view-all">
+                        مشاهده همه
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/2-21.webp" alt="کارت گرافیک RX 7900" loading="lazy">
+                            <div class="product-actions">
+                                <button type="button" class="action-btn like-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button type="button" class="action-btn compare-btn" aria-label="مقایسه محصول">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                            </div>
+                            <div class="discount-badge">۱۸٪</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">کارت گرافیک AMD Radeon RX 7900 XTX 24GB</h3>
+                            <div class="price-row">
+                                <span class="old-price">۷۲,۰۰۰,۰۰۰ تومان</span>
+                                <span class="new-price">۵۹,۰۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <div class="timer">
+                                <i class="fas fa-clock"></i>
+                                <span class="timer-text">01:20:15</span>
+                            </div>
+                            <button type="button" class="btn btn-primary add-to-cart" data-product="9">
+                                <i class="fas fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/1-36.webp" alt="پردازنده Ryzen 7" loading="lazy">
+                            <div class="product-actions">
+                                <button type="button" class="action-btn like-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button type="button" class="action-btn compare-btn" aria-label="مقایسه محصول">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">پردازنده AMD Ryzen 7 7800X3D</h3>
+                            <div class="price-row">
+                                <span class="new-price">۲۴,۵۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <button type="button" class="btn btn-primary add-to-cart" data-product="10">
+                                <i class="fas fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/1728247165334_865.webp" alt="مانیتور گیمینگ" loading="lazy">
+                            <div class="product-actions">
+                                <button type="button" class="action-btn like-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button type="button" class="action-btn compare-btn" aria-label="مقایسه محصول">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                            </div>
+                            <div class="discount-badge">۱۵٪</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">مانیتور گیمینگ Samsung Odyssey G7 32-inch</h3>
+                            <div class="price-row">
+                                <span class="old-price">۳۵,۰۰۰,۰۰۰ تومان</span>
+                                <span class="new-price">۲۹,۷۵۰,۰۰۰ تومان</span>
+                            </div>
+                            <div class="timer">
+                                <i class="fas fa-clock"></i>
+                                <span class="timer-text">02:45:30</span>
+                            </div>
+                            <button type="button" class="btn btn-primary add-to-cart" data-product="11">
+                                <i class="fas fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/https___hybrismediaprod.blob_.core_.windows.net_sys-master-phoenix-images-container_h2a_hd3_9538807103518_blackwidow-v3-black-5-500x500-1.webp" alt="کیبورد مکانیکی" loading="lazy">
+                            <div class="product-actions">
+                                <button type="button" class="action-btn like-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button type="button" class="action-btn compare-btn" aria-label="مقایسه محصول">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">کیبورد مکانیکی Razer BlackWidow V4 Pro</h3>
+                            <div class="price-row">
+                                <span class="new-price">۱۲,۵۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <button type="button" class="btn btn-primary add-to-cart" data-product="12">
+                                <i class="fas fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Linked Banners -->
+        <section class="linked-banners">
+            <div class="container">
+                <div class="banners-grid">
+                    <!-- Smart Assemble Banner -->
+                    <a href="assemble.html" class="banner-card assemble-banner">
+                        <div class="banner-content">
+                            <h3>اسمبل هوشمند</h3>
+                            <p>سیستم ایده‌آل خود را با کمک هوش مصنوعی ما طراحی کنید</p>
+                            <span class="banner-link">
+                                شروع کنید
+                                <i class="fas fa-arrow-left"></i>
+                            </span>
+                        </div>
+                    </a>
+                    
+                    <!-- Blog Banner -->
+                    <a href="blog.html" class="banner-card blog-banner">
+                        <div class="banner-content">
+                            <h3>مجله آکوامگ</h3>
+                            <p>جدیدترین مقالات و اخبار تکنولوژی و گیمینگ</p>
+                            <span class="banner-link">
+                                مطالعه مقالات
+                                <i class="fas fa-arrow-left"></i>
+                            </span>
+                        </div>
+                    </a>
+                    
+                    <!-- Consoles Banner -->
+                    <a href="product.html?category=consoles" class="banner-card consoles-banner">
+                        <div class="banner-content">
+                            <h3>کنسول‌های گیمینگ</h3>
+                            <p>جدیدترین کنسول‌ها و اکسسوری‌های مربوطه</p>
+                            <span class="banner-link">
+                                مشاهده محصولات
+                                <i class="fas fa-arrow-left"></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>در خبرنامه آکوامارکت عضو شوید</h2>
+                        <p>اولین نفری باشید که از جدیدترین محصولات، تخفیف‌ها و مقالات تخصصی مطلع می‌شوید</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="ایمیل خود را وارد کنید" aria-label="ایمیل برای خبرنامه" required>
+                        <button type="submit" class="btn btn-primary">عضویت رایگان</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </div>
+                    <p class="footer-description">
+                        AquaMarket مرجع تخصصی قطعات کامپیوتر، گیمینگ و تکنولوژی با بهترین قیمت و گارانتی
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="اینستاگرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="تلگرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" aria-label="یوتیوب">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="توییتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">لینک‌های مفید</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="product.html">محصولات</a></li>
+                        <li><a href="blog.html">مجله آکوامگ</a></li>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="tel:134">تماس با ما</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">خدمات مشتریان</h3>
+                    <ul class="footer-links">
+                        <li><a href="shipping.html">اطلاعات ارسال</a></li>
+                        <li><a href="warranty.html">گارانتی محصولات</a></li>
+                        <li><a href="return.html">شرایط بازگرداندن کالا</a></li>
+                        <li><a href="faq.html">سوالات متداول</a></li>
+                        <li><a href="support.html">پشتیبانی</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">اطلاعات تماس</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@aquamarket.ir</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>۰۲۱-۱۲۳۴۵۶۷۸</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>تهران، خیابان ولیعصر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>کلیه حقوق این وب‌سایت متعلق به AquaMarket می‌باشد © 1404</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="sitemap.html">نقشه سایت</a>
+                    <a href="privacy-terms.html">قوانین و مقررات</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <button type="button" class="floating-btn back-to-top" aria-label="بازگشت به بالا">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <button type="button" class="floating-btn support-btn" aria-label="پشتیبانی آنلاین">
+        <i class="fas fa-headset"></i>
+    </button>
+
+    <!-- Side Panels & Modals -->
+    <!-- Cart Panel -->
+    <div class="side-panel cart-panel">
+        <div class="panel-header">
+            <h3>سبد خرید</h3>
+            <button type="button" class="close-panel" aria-label="بستن پنل">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="panel-content">
+            <div class="cart-items">
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>سبد خرید شما خالی است</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="cart-total">
+                <span>جمع کل:</span>
+                <span class="total-price">۰ تومان</span>
+            </div>
+            <button type="button" class="btn btn-primary btn-block">تکمیل سفارش</button>
+        </div>
+    </div>
+    
+    <div class="panel-overlay" id="cart-overlay"></div>
+
+    <!-- Account Modal -->
+    <div class="modal account-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>ورود / ثبت‌نام</h3>
+                <button type="button" class="close-modal" aria-label="بستن مودال">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="account-form" id="account-form">
+                    <div class="form-group">
+                        <label for="email">ایمیل</label>
+                        <input type="email" id="email" placeholder="ایمیل خود را وارد کنید">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">رمز عبور</label>
+                        <input type="password" id="password" placeholder="رمز عبور خود را وارد کنید">
+                    </div>
+                    
+                    <!-- دکمه ورود که یک لینک است -->
+                    <a href="account.html" class="btn btn-primary btn-block" id="login-link-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        ورود به حساب کاربری
+                    </a>
+                    
+                    <div class="form-footer">
+                        <p>حساب کاربری ندارید؟ <a href="account.html" class="register-link">ثبت‌نام کنید</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-overlay" id="account-overlay"></div>
+    </div>
+
+    <!-- Chat Modal -->
+    <div class="modal chat-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>پشتیبانی آنلاین</h3>
+                <button type="button" class="close-modal" aria-label="بستن مودال">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="chat-messages">
+                    <div class="message received">
+                        <div class="message-content">
+                            <p>سلام! چطور می‌تونم کمکتون کنم؟</p>
+                        </div>
+                        <span class="message-time">۱۰:۳۰</span>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="پیام خود را بنویسید...">
+                    <button type="button" class="send-btn" aria-label="ارسال پیام">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-overlay" id="chat-overlay"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>

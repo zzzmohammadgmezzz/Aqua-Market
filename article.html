@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بررسی کامل سری RTX 5000: انقلابی در صنعت گرافیک | AquaMag</title>
+    <meta name="description" content="نگاهی عمیق به جدیدترین کارت‌های گرافیک انویدیا با معماری Blackwell. آیا این کارت‌ها ارزش سرمایه‌گذاری دارند؟">
+    
+    <!-- Persian Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/article.css">
+    
+    <!-- Preload Images -->
+    <link rel="preload" href="/assets/img/shakhes_1.jpg" as="image">
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button class="icon-btn menu-toggle" aria-label="منو" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="/assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40" loading="lazy">
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <form class="search-form">
+                        <input type="text" placeholder="جستجوی مقالات..." aria-label="جستجوی مقالات">
+                        <button type="submit" aria-label="جستجو">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <button class="icon-btn theme-toggle" aria-label="تغییر تم" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="icon-btn account-btn" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="product.html" class="nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="nav-link">تخفیف‌ها</a></li>
+                    <li><a href="/assemble.html" class="nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="nav-link">مجله آکوامگ</a></li>
+                    <li><a href="about.html" class="nav-link">درباره ما</a></li>
+                    <li><a href="tel:02112345678" class="nav-link">تماس</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <img src="/assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40" loading="lazy">
+                </div>
+                <button class="close-mobile-menu" aria-label="بستن منو" id="close-mobile-menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav" aria-label="منوی موبایل">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="mobile-nav-link">خانه</a></li>
+                    <li><a href="product.html" class="mobile-nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="mobile-nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="mobile-nav-link">تخفیف‌ها</a></li>
+                    <li><a href="/assemble.html" class="mobile-nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="mobile-nav-link">مجله آکوامگ</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">درباره ما</a></li>
+                    <li><a href="tel:02112345678" class="mobile-nav-link">تماس</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu-footer">
+                <div class="mobile-header-icons">
+                    <button class="mobile-icon-btn theme-toggle" aria-label="تغییر تم" id="mobile-theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-icon-btn account-btn" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="مسیر">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="blog.html">مجله آکوامگ</a></li>
+                    <li><a href="blog.html?category=gaming">گیمینگ</a></li>
+                    <li aria-current="page">بررسی کامل سری RTX 5000</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <!-- Article Hero -->
+        <section class="article-hero">
+            <div class="container">
+                <div class="article-hero-content">
+                    <div class="article-meta">
+                        <span class="category gaming">گیمینگ</span>
+                        <span class="date"><i class="far fa-clock"></i> ۲ ساعت پیش</span>
+                        <span class="views"><i class="far fa-eye"></i> <span class="view-count">۲,۴۵۱</span> بازدید</span>
+                    </div>
+                    
+                    <h1 class="article-title">بررسی کامل سری RTX 5000: انقلابی در صنعت گرافیک</h1>
+                    
+                    <div class="article-author">
+                        <div class="author-avatar-wrapper">
+                            <img src="/assets/img/artworks-000085504604-juxs9q-t500x500.jpg" 
+                                 alt="علیرضا محمدی" 
+                                 class="author-avatar"
+                                 loading="lazy"
+                                 onerror="this.src='/assets/img/default-avatar.jpg'">
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">علیرضا محمدی</span>
+                            <span class="author-role">کارشناس سخت‌افزار و گیمینگ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <article class="article-content">
+            <div class="container">
+                <div class="article-layout">
+                    <!-- Main Content -->
+                    <div class="article-main">
+                        <!-- Featured Image -->
+                        <div class="article-featured-image">
+                            <img src="/assets/img/shakhes_1.jpg" alt="کارت گرافیک RTX 5000" loading="lazy">
+                            <div class="image-caption">کارت گرافیک GeForce RTX 5090 از سری 5000</div>
+                        </div>
+                        
+                        <!-- Article Body -->
+                        <div class="article-body">
+                            <div class="article-intro">
+                                <p>نویدیا بالاخره از جدیدترین معماری خود به نام Blackwell رونمایی کرد و نسل جدید کارت‌های گرافیک سری RTX 5000 را معرفی نمود. در این بررسی جامع، به تحلیل عمیق این معماری جدید، عملکرد آن در بازی‌ها، قدرت پردازش هوش مصنوعی و همچنین بررسی قیمت‌گذاری این محصولات می‌پردازیم.</p>
+                            </div>
+                            
+                            <!-- Table of Contents -->
+                            <div class="table-of-contents">
+                                <h3><i class="fas fa-list"></i> فهرست مطالب</h3>
+                                <ul>
+                                    <li><a href="#section1">معماری Blackwell: چه چیزی تغییر کرده؟</a></li>
+                                    <li><a href="#section2">عملکرد در بازی‌های مختلف</a></li>
+                                    <li><a href="#section3">قدرت پردازش هوش مصنوعی و رندرینگ</a></li>
+                                    <li><a href="#section4">مصرف انرژی و دمای کاری</a></li>
+                                    <li><a href="#section5">قیمت‌گذاری و ارزش خرید</a></li>
+                                    <li><a href="#section6">مقایسه با نسل قبلی و رقبا</a></li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Article Sections -->
+                            <section id="section1" class="article-section">
+                                <h2>معماری Blackwell: چه چیزی تغییر کرده؟</h2>
+                                <p>معماری Blackwell بزرگ‌ترین جهش انویدیا از زمان معرفی Turing در سال ۲۰۱۸ محسوب می‌شود. این معماری بر اساس فرآیند ۳ نانومتری TSMC ساخته شده که نسبت به نسل قبلی ۴۰٪ ترانزیستور بیشتر در همان سطح فضای سیلیکونی ارائه می‌دهد.</p>
+                                
+                                <div class="article-image">
+                                    <img src="/assets/img/B100-BLACKWEL-HBM.jpg" alt="معماری Blackwell" loading="lazy">
+                                    <div class="image-caption">نمودار معماری Blackwell</div>
+                                </div>
+                                
+                                <p>مهم‌ترین ویژگی‌های معماری Blackwell شامل:</p>
+                                <ul>
+                                    <li><strong>CUDA Core های نسل چهارم:</strong> ۵۰٪ بهبود در عملکرد محاسباتی</li>
+                                    <li><strong>Tensor Core های نسل پنجم:</strong> قدرت پردازش هوش مصنوعی دو برابر شده</li>
+                                    <li><strong>RT Core های نسل چهارم:</strong> رهیاب پرتو ۳۰٪ سریع‌تر</li>
+                                    <li><strong>حافظه GDDR7:</strong> پهنای باند ۳۲٪ بیشتر نسبت به GDDR6X</li>
+                                    <li><strong>DLSS 4:</strong> فناوری جدید upscaling با کیفیت نزدیک به نیتیو</li>
+                                </ul>
+                            </section>
+                            
+                            <section id="section2" class="article-section">
+                                <h2>عملکرد در بازی‌های مختلف</h2>
+                                <p>برای آزمایش عملکرد، سیستم تست ما شامل پردازنده Core i9-14900K، مادربرد Z790 و حافظه ۳۲GB DDR5-7200 بود. نتایج در رزولوشن 4K با حداکثر تنظیمات گرافیکی به دست آمده است.</p>
+                                
+                                <div class="performance-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>نام بازی</th>
+                                                <th>RTX 4090</th>
+                                                <th>RTX 5090</th>
+                                                <th>افزایش عملکرد</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Cyberpunk 2077 (RT Overdrive)</td>
+                                                <td>۴۲ فریم</td>
+                                                <td>۶۷ فریم</td>
+                                                <td>۵۹٪+</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Alan Wake 2 (Ultra + RT)</td>
+                                                <td>۳۸ فریم</td>
+                                                <td>۶۱ فریم</td>
+                                                <td>۶۰٪+</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Microsoft Flight Simulator</td>
+                                                <td>۵۵ فریم</td>
+                                                <td>۸۲ فریم</td>
+                                                <td>۴۹٪+</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Horizon Forbidden West</td>
+                                                <td>۶۸ فریم</td>
+                                                <td>۹۵ فریم</td>
+                                                <td>۴۰٪+</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Call of Duty: Modern Warfare III</td>
+                                                <td>۱۲۱ فریم</td>
+                                                <td>۱۶۵ فریم</td>
+                                                <td>۳۶٪+</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <p>همانطور که مشاهده می‌کنید، افزایش عملکرد در بازی‌هایی که از رهیاب پرتو و گرافیک سنگین استفاده می‌کنند بیشتر محسوس است. RTX 5090 در رزولوشن 4K به راحتی از مرز ۶۰ فریم در بازی‌های سنگین عبور می‌کند.</p>
+                            </section>
+                            
+                            <section id="section3" class="article-section">
+                                <h2>قدرت پردازش هوش مصنوعی و رندرینگ</h2>
+                                <p>یکی از نقاط قوت اصلی معماری Blackwell، قدرت پردازش هوش مصنوعی آن است. Tensor Core های نسل پنجم با پشتیبانی از FP8 و FP6، سرعت پردازش مدل‌های هوش مصنوعی را به شدت افزایش داده‌اند.</p>
+                                
+                                <div class="article-image">
+                                    <img src="/assets/img/3 1601_top-10-pc-gaming-hot-2024-10.jpg" alt="عملکرد هوش مصنوعی" loading="lazy">
+                                    <div class="image-caption">مقایسه عملکرد هوش مصنوعی در معماری‌های مختلف</div>
+                                </div>
+                                
+                                <p>در تست‌های رندرینگ با نرم‌افزارهایی مانند Blender و OctaneRender، شاهد افزایش ۴۰-۶۰٪ی سرعت رندر نسبت به نسل قبلی هستیم. این بهبود برای طراحان سه‌بعدی و انیماتورها بسیار ارزشمند است.</p>
+                                
+                                <div class="highlight-box">
+                                    <h4><i class="fas fa-lightbulb"></i> نکته مهم</h4>
+                                    <p>RTX 5090 با ۱۸۱ ترافلاپس قدرت پردازش هوش مصنوعی (FP8)، تقریباً دو برابر RTX 4090 است. این امر آن را به گزینه‌ای ایده‌آل برای توسعه‌دهندگان هوش مصنوعی تبدیل کرده است.</p>
+                                </div>
+                            </section>
+                            
+                            <section id="section4" class="article-section">
+                                <h2>مصرف انرژی و دمای کاری</h2>
+                                <p>با وجود افزایش قابل توجه عملکرد، مصرف انرژی RTX 5090 نسبت به نسل قبلی تنها ۱۵٪ افزایش یافته است. در تست‌های ما، حداکثر مصرف انرژی در بار کامل ۴۸۰ وات ثبت شد که نسبت به ۴۵۰ وات RTX 4090 افزایش معقولی دارد.</p>
+                                
+                                <div class="article-image">
+                                    <img src="/assets/img/t2NVIDIA-B100-vs-H200-scaled.jpg" alt="نمودار دما و مصرف انرژی" loading="lazy">
+                                    <div class="image-caption">مقایسه دما و مصرف انرژی در بارهای مختلف</div>
+                                </div>
+                                
+                                <p>سیستم خنک‌کننده جدید با سه فن ۱۲۰mm و هیت‌سینک بخار محفظه (Vapor Chamber) دمای کاری را به خوبی کنترل می‌کند. در تست‌های ما، دمای هسته در حین بازی‌های سنگین به ۷۲ درجه سانتی‌گراد رسید که نسبت به RTX 4090 (۷۶ درجه) بهبود محسوسی دارد.</p>
+                                
+                                <div class="pros-cons">
+                                    <div class="pros">
+                                        <h4><i class="fas fa-check-circle"></i> نقاط قوت</h4>
+                                        <ul>
+                                            <li>افزایش عملکرد ۴۰-۶۰٪ نسبت به نسل قبلی</li>
+                                            <li>قدرت پردازش هوش مصنوعی دو برابر شده</li>
+                                            <li>کنترل دمای بهتر با سیستم خنک‌کننده بهبود یافته</li>
+                                            <li>پشتیبانی از استانداردهای نمایشی جدید</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cons">
+                                        <h4><i class="fas fa-times-circle"></i> نقاط ضعف</h4>
+                                        <ul>
+                                            <li>قیمت بسیار بالا (حدود ۲۰۰۰ دلار)</li>
+                                            <li>مصرف انرژی نسبتاً زیاد</li>
+                                            <li>نیاز به منبع تغذیه قدرتمند (حداقل ۱۰۰۰ وات)</li>
+                                            <li>اندازه بزرگ (۳.۵ اسلات)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <section id="section5" class="article-section">
+                                <h2>قیمت‌گذاری و ارزش خرید</h2>
+                                <p>نویدیا قیمت رسمی RTX 5090 را ۱۹۹۹ دلار اعلام کرده که نسبت به RTX 4090 (۱۵۹۹ دلار) افزایش ۲۵٪ی داشته است. مدل‌های سفارشی تولیدکنندگان مانند ASUS، MSI و Gigabyte با قیمت ۲۱۰۰-۲۳۰۰ دلار عرضه می‌شوند.</p>
+                                
+                                <p>برای تصمیم‌گیری در مورد خرید، باید چند فاکتور را در نظر بگیرید:</p>
+                                
+                                <ol>
+                                    <li><strong>کاربران حرفه‌ای:</strong> اگر در حوزه رندرینگ، طراحی سه‌بعدی یا توسعه هوش مصنوعی فعالیت می‌کنید، این کارت سرمایه‌گذاری ارزشمندی است.</li>
+                                    <li><strong>گیمرهای حرفه‌ای:</strong> برای بازی در رزولوشن 4K با حداکثر تنظیمات و نرخ تازه‌سازی بالا، RTX 5090 بهترین انتخاب است.</li>
+                                    <li><strong>گیمرهای معمولی:</strong> اگر در رزولوشن 1440p بازی می‌کنید، RTX 5080 یا حتی مدل‌های نسل قبل انتخاب بهتری هستند.</li>
+                                    <li><strong>کاربران با بودجه محدود:</strong> منتظر عرضه مدل‌های میان‌رده مانند RTX 5070 باشید یا به نسل ۴۰۰۰ نگاه کنید.</li>
+                                </ol>
+                            </section>
+                            
+                            <section id="section6" class="article-section">
+                                <h2>مقایسه با نسل قبلی و رقبا</h2>
+                                <p>در مقایسه با RTX 4090، بهبود عملکرد ۴۰-۶۰٪ی ارزش افزایش قیمت ۲۵٪ی را دارد، به خصوص برای کاربران حرفه‌ای. در مقابل محصولات AMD، انویدیا همچنان در بخش رهیاب پرتو و فناوری‌هایی مانند DLSS پیشتاز است.</p>
+                                
+                                <div class="comparison-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>مشخصات</th>
+                                                <th>RTX 5090</th>
+                                                <th>RTX 4090</th>
+                                                <th>RX 7900 XTX</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>معماری</td>
+                                                <td>Blackwell</td>
+                                                <td>Ada Lovelace</td>
+                                                <td>RDNA 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فرآیند ساخت</td>
+                                                <td>۳ نانومتر</td>
+                                                <td>۴ نانومتر</td>
+                                                <td>۵ نانومتر</td>
+                                            </tr>
+                                            <tr>
+                                                <td>CUDA Core/Stream Processor</td>
+                                                <td>۲۴۵۷۶</td>
+                                                <td>۱۶۳۸۴</td>
+                                                <td>۶۱۴۴</td>
+                                            </tr>
+                                            <tr>
+                                                <td>حافظه</td>
+                                                <td>۲۴GB GDDR7</td>
+                                                <td>۲۴GB GDDR6X</td>
+                                                <td>۲۴GB GDDR6</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مصرف انرژی</td>
+                                                <td>۴۸۰ وات</td>
+                                                <td>۴۵۰ وات</td>
+                                                <td>۳۵۵ وات</td>
+                                            </tr>
+                                            <tr>
+                                                <td>قیمت تخمینی</td>
+                                                <td>۱۹۹۹ دلار</td>
+                                                <td>۱۵۹۹ دلار</td>
+                                                <td>۹۹۹ دلار</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="article-conclusion">
+                                    <h3><i class="fas fa-check-circle"></i> جمع‌بندی نهایی</h3>
+                                    <p>کارت گرافیک GeForce RTX 5090 بدون شک قدرتمندترین کارت گرافیک حال حاضر بازار است. با معماری Blackwell، انویدیا جهش قابل توجهی در عملکرد، به خصوص در بخش پردازش هوش مصنوعی و رهیاب پرتو ایجاد کرده است. اگرچه قیمت آن بالا است، اما برای کاربران حرفه‌ای و گیمرهایی که به دنبال بهترین تجربه 4K هستند، ارزش سرمایه‌گذاری را دارد. برای کاربران معمولی، منتظر عرضه مدل‌های میان‌رده یا کاهش قیمت نسل ۴۰۰۰ باشید.</p>
+                                </div>
+                            </section>
+                            
+                            <!-- Article Tags -->
+                            <div class="article-tags">
+                                <h4>برچسب‌ها:</h4>
+                                <div class="tags-list">
+                                    <a href="#" class="tag">انویدیا</a>
+                                    <a href="#" class="tag">RTX 5000</a>
+                                    <a href="#" class="tag">Blackwell</a>
+                                    <a href="#" class="tag">کارت گرافیک</a>
+                                    <a href="#" class="tag">گیمینگ</a>
+                                    <a href="#" class="tag">هوش مصنوعی</a>
+                                    <a href="#" class="tag">DLSS</a>
+                                    <a href="#" class="tag">4K</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Article Share -->
+                            <div class="article-share">
+                                <h4>اشتراک‌گذاری مقاله:</h4>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-btn telegram" aria-label="اشتراک در تلگرام">
+                                        <i class="fab fa-telegram"></i> تلگرام
+                                    </a>
+                                    <a href="#" class="share-btn whatsapp" aria-label="اشتراک در واتساپ">
+                                        <i class="fab fa-whatsapp"></i> واتساپ
+                                    </a>
+                                    <a href="#" class="share-btn twitter" aria-label="اشتراک در توییتر">
+                                        <i class="fab fa-twitter"></i> توییتر
+                                    </a>
+                                    <a href="#" class="share-btn linkedin" aria-label="اشتراک در لینکدین">
+                                        <i class="fab fa-linkedin"></i> لینکدین
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Author Box -->
+                        <div class="author-box">
+                            <div class="comment-avatar">
+                                <img src="/assets/img/artworks-000085504604-juxs9q-t500x500.jpg" alt="علیرضا محمدی" loading="lazy">
+                            </div>
+                            <div class="author-details">
+                                <h3>علیرضا محمدی</h3>
+                                <p class="author-bio">کارشناس سخت‌افزار و گیمینگ با ۱۰ سال سابقه در تحلیل و بررسی قطعات کامپیوتری. نویسنده اصلی بخش سخت‌افزار در AquaMag و علاقه‌مند به فناوری‌های نوین در صنعت گیمینگ.</p>
+                                <div class="author-social">
+                                    <a href="#" aria-label="توییتر"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" aria-label="لینکدین"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="وبسایت"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Comments Section -->
+                        <div class="comments-section">
+                            <div class="section-header">
+                                <h2 class="section-title">نظرات (<span class="comments-count">۸۷</span>)</h2>
+                            </div>
+                            
+                            <div class="comment-form">
+                                <h3>نظر خود را بنویسید</h3>
+                                <form id="comment-form">
+                                    <div class="form-group">
+                                        <textarea placeholder="نظر شما..." rows="4" aria-label="متن نظر" id="comment-text" maxlength="1000"></textarea>
+                                        <div class="char-counter">0/1000 کاراکتر</div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="نام شما" aria-label="نام" id="comment-name">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" placeholder="ایمیل شما" aria-label="ایمیل" id="comment-email">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">ارسال نظر</button>
+                                </form>
+                            </div>
+                            
+                            <div class="comments-list" id="comments-list">
+                                <!-- Comment 1 -->
+                                <div class="comment">
+                                    <div class="comment-avatar">
+                                        <img src="/assets/img/user1.jpg" alt="علی رضایی" loading="lazy">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-header">
+                                            <h4 class="comment-author">علی رضایی</h4>
+                                            <span class="comment-date">۲ ساعت پیش</span>
+                                        </div>
+                                        <p class="comment-text">مقاله بسیار جامع و کاربردی بود. ممنون از بررسی دقیقتون. فقط ای کاش در مورد مدل‌های میان‌رده سری ۵۰۰۰ هم اطلاعاتی می‌دادید.</p>
+                                        <button class="comment-reply">پاسخ</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Comment 2 -->
+                                <div class="comment">
+                                    <div class="comment-avatar">
+                                        <img src="/assets/img/user2.jpg" alt="سارا محمدی" loading="lazy">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-header">
+                                            <h4 class="comment-author">سارا محمدی</h4>
+                                            <span class="comment-date">۵ ساعت پیش</span>
+                                        </div>
+                                        <p class="comment-text">آیا این کارت برای رندرینگ معماری با نرم‌افزارهایی مثل V-Ray و Corona مناسب هست؟ مصرف انرژی بالاش نگرانم کرده.</p>
+                                        <button class="comment-reply">پاسخ</button>
+                                        
+                                        <!-- Reply -->
+                                        <div class="comment reply">
+                                            <div class="comment-avatar">
+                                                <img src="/assets/img/artworks-000085504604-juxs9q-t500x500.jpg" alt="علیرضا محمدی" loading="lazy">
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-header">
+                                                    <h4 class="comment-author">علیرضا محمدی (نویسنده)</h4>
+                                                    <span class="comment-date">۳ ساعت پیش</span>
+                                                </div>
+                                                <p class="comment-text">بله کاملاً مناسب هست. در تست‌های ما سرعت رندر ۴۵٪ نسبت به RTX 4090 افزایش داشت. در مورد مصرف انرژی هم اگر منبع تغذیه مناسب (حداقل ۱۰۰۰ وات) داشته باشید، مشکلی پیش نمیاد.</p>
+                                                <button class="comment-reply">پاسخ</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Comment 3 -->
+                                <div class="comment">
+                                    <div class="comment-avatar">
+                                        <img src="/assets/img/user3.jpg" alt="محمد حسینی" loading="lazy">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-header">
+                                            <h4 class="comment-author">محمد حسینی</h4>
+                                            <span class="comment-date">۱ روز پیش</span>
+                                        </div>
+                                        <p class="comment-text">من RTX 4090 دارم. آیا ارتقا به ۵۰۹۰ منطقیه؟ تفاوت قیمتش خیلی زیاد شده.</p>
+                                        <button class="comment-reply">پاسخ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar -->
+                    <aside class="article-sidebar">
+                        <!-- Popular Articles -->
+                        <div class="sidebar-widget popular-widget">
+                            <h3 class="widget-title">مقالات پربازدید</h3>
+                            <div class="popular-articles">
+                                <article class="popular-article">
+                                    <div class="popular-image">
+                                        <img src="/assets/img/95522.webp" alt="بهترین کارت گرافیک میان‌رده" loading="lazy">
+                                    </div>
+                                    <div class="popular-content">
+                                        <h4>
+                                            <a href="/blog/best-midrange-gpu">بهترین کارت گرافیک میان‌رده 2024</a>
+                                        </h4>
+                                        <div class="article-meta">
+                                            <span class="date">۳ روز پیش</span>
+                                            <span class="views">۱۲,۴۵۶ بازدید</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <article class="popular-article">
+                                    <div class="popular-image">
+                                        <img src="/assets/img/assets_task_01k6htbxsqfxkvrd65vh3hesxz_1759387266_img_0.webp" alt="تنظیمات نهایی بازی" loading="lazy">
+                                    </div>
+                                    <div class="popular-content">
+                                        <h4>
+                                            <a href="/blog/ultimate-game-settings">تنظیمات نهایی برای بهترین تجربه گیمینگ</a>
+                                        </h4>
+                                        <div class="article-meta">
+                                            <span class="date">۱ هفته پیش</span>
+                                            <span class="views">۹,۸۷۶ بازدید</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <article class="popular-article">
+                                    <div class="popular-image">
+                                        <img src="/assets/img/be1e51bbf04844b7946f9b877ac05bf9.webp" alt="مقایسه SSD های NVMe" loading="lazy">
+                                    </div>
+                                    <div class="popular-content">
+                                        <h4>
+                                            <a href="/blog/nvme-ssd-comparison">مقایسه 10 SSD NVMe برتر بازار</a>
+                                        </h4>
+                                        <div class="article-meta">
+                                            <span class="date">۲ هفته پیش</span>
+                                            <span class="views">۷,۵۴۳ بازدید</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <article class="popular-article">
+                                    <div class="popular-image">
+                                        <img src="/assets/img/2عکس-شاخص-6-1.webp" alt="آموزش کابل‌کشی کیس" loading="lazy">
+                                    </div>
+                                    <div class="popular-content">
+                                        <h4>
+                                            <a href="/blog/cable-management-guide">آموزش کابل‌کشی حرفه‌ای در کیس</a>
+                                        </h4>
+                                        <div class="article-meta">
+                                            <span class="date">۳ هفته پیش</span>
+                                            <span class="views">۶,۱۲۳ بازدید</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        
+                        <!-- Newsletter -->
+                        <div class="sidebar-widget newsletter-widget">
+                            <h3 class="widget-title">عضویت در خبرنامه</h3>
+                            <p>جدیدترین مقالات و اخبار گیمینگ را در ایمیل خود دریافت کنید</p>
+                            <form class="newsletter-form" id="newsletter-form">
+                                <input type="email" placeholder="ایمیل خود را وارد کنید" aria-label="ایمیل برای خبرنامه" required>
+                                <button type="submit" class="btn btn-primary">عضویت</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Social Widget -->
+                        <div class="sidebar-widget social-widget">
+                            <h3 class="widget-title">ما را دنبال کنید</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link telegram" aria-label="تلگرام">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="#" class="social-link instagram" aria-label="اینستاگرام">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link youtube" aria-label="یوتیوب">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-link twitter" aria-label="توییتر">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                
+                <!-- Related Articles Section -->
+                <section class="related-articles-section">
+                    <div class="section-header">
+                        <h2 class="section-title">مقالات پیشنهادی</h2>
+                    </div>
+                    
+                    <div class="related-grid">
+                        <article class="related-card">
+                            <div class="related-image">
+                                <img src="/assets/img/best-intel-CPU.jpg" alt="مقایسه پردازنده‌های اینتل" loading="lazy">
+                            </div>
+                            <div class="related-content">
+                                <div class="article-meta">
+                                    <span class="category hardware">سخت‌افزار</span>
+                                    <span class="date">۳ روز پیش</span>
+                                </div>
+                                <h3 class="related-title">
+                                    <a href="/blog/intel-15th-gen-comparison">مقایسه پردازنده‌های نسل ۱۵ اینتل</a>
+                                </h3>
+                                <div class="article-stats">
+                                    <span class="stat"><i class="far fa-eye"></i> ۲,۸۷۶</span>
+                                    <span class="stat"><i class="far fa-comment"></i> ۹۳</span>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="related-card">
+                            <div class="related-image">
+                                <img src="/assets/img/ram overclocking-946.webp" alt="آموزش اورکلاک RAM" loading="lazy">
+                            </div>
+                            <div class="related-content">
+                                <div class="article-meta">
+                                    <span class="category tutorial">آموزش</span>
+                                    <span class="date">۵ روز پیش</span>
+                                </div>
+                                <h3 class="related-title">
+                                    <a href="/blog/ram-overclocking-guide">آموزش کامل اورکلاک RAM</a>
+                                </h3>
+                                <div class="article-stats">
+                                    <span class="stat"><i class="far fa-eye"></i> ۳,۴۵۶</span>
+                                    <span class="stat"><i class="far fa-comment"></i> ۱۲۴</span>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="related-card">
+                            <div class="related-image">
+                                <img src="/assets/img/best-gaming-monitor2.jpg" alt="مانیتورهای 4K گیمینگ" loading="lazy">
+                            </div>
+                            <div class="related-content">
+                                <div class="article-meta">
+                                    <span class="category peripherals">پریفرال</span>
+                                    <span class="date">۴ روز پیش</span>
+                                </div>
+                                <h3 class="related-title">
+                                    <a href="/blog/best-4k-gaming-monitors">5 مانیتور برتر 4K برای گیمینگ</a>
+                                </h3>
+                                <div class="article-stats">
+                                    <span class="stat"><i class="far fa-eye"></i> ۱,۹۸۷</span>
+                                    <span class="stat"><i class="far fa-comment"></i> ۶۷</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="/assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40" loading="lazy">
+                    </div>
+                    <p class="footer-description">
+                        AquaMag مرجع تخصصی مقالات، اخبار و بررسی‌های حوزه گیمینگ و تکنولوژی
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="اینستاگرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="تلگرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" aria-label="یوتیوب">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="توییتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">لینک‌های مفید</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="blog.html">مجله آکوامگ</a></li>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="tel:02112345678">تماس با ما</a></li>
+                        <li><a href="/privacy">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">دسته‌بندی‌ها</h3>
+                    <ul class="footer-links">
+                        <li><a href="/blog/category/gaming">گیمینگ</a></li>
+                        <li><a href="/blog/category/hardware">سخت‌افزار</a></li>
+                        <li><a href="/blog/category/tutorial">آموزش</a></li>
+                        <li><a href="/blog/category/news">اخبار</a></li>
+                        <li><a href="/blog/category/reviews">بررسی محصول</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">اطلاعات تماس</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>mag@aquamarket.ir</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>۰۲۱-۱۲۳۴۵۶۷۸</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>تهران، خیابان ولیعصر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>کلیه حقوق این وب‌سایت متعلق به AquaMag می‌باشد © 1404</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="sitemap.html">نقشه سایت</a>
+                    <a href="/privacy-terms.html">قوانین و مقررات</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <button class="floating-btn back-to-top" aria-label="بازگشت به بالا" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/article.js" defer></script>
+</body>
+</html>

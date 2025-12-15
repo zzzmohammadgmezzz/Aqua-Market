@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaMag - مجله تخصصی گیمینگ و تکنولوژی</title>
+    <meta name="description" content="AquaMag - جدیدترین مقالات، اخبار و بررسی‌های حوزه گیمینگ، تکنولوژی و قطعات کامپیوتر">
+    
+    <!-- Persian Font -->
+    <link rel="stylesheet" href="assets/fonts/vazirmatn-v33.003/Vazirmatn-font-face.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/blog.css">
+    
+    <!-- View Counter Fix Script -->
+    <script>
+        // تابع تبدیل اعداد فارسی به انگلیسی
+        function persianToEnglishNumber(str) {
+            const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+            const arabicNumbers = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+            let result = str;
+            
+            for(let i = 0; i < 10; i++) {
+                result = result.replace(new RegExp(persianNumbers[i], 'g'), i);
+                result = result.replace(new RegExp(arabicNumbers[i], 'g'), i);
+            }
+            return result;
+        }
+
+        // تابع فرمت کردن اعداد با جداکننده هزارگان
+        function formatNumber(num) {
+            if (isNaN(num)) return '۰';
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        // تابع اصلی برای رفع مشکل بازدیدها
+        function fixViewCounts() {
+            // تمام عناصر بازدید را پیدا کن
+            const viewElements = document.querySelectorAll('.article-stats .stat:nth-child(1)');
+            const popularViewElements = document.querySelectorAll('.popular-article .views');
+            
+            // تبدیل اعداد به انگلیسی و فرمت کردن
+            viewElements.forEach(el => {
+                const currentText = el.textContent || el.innerText;
+                const viewCount = parseInt(persianToEnglishNumber(currentText));
+                if (!isNaN(viewCount)) {
+                    el.innerHTML = `<i class="far fa-eye"></i> ${formatNumber(viewCount)}`;
+                } else {
+                    // اگر بازدید عددی نبود، مقدار ثابت قرار بده
+                    el.innerHTML = `<i class="far fa-eye"></i> ${formatNumber(2451)}`;
+                }
+            });
+
+            // برای مقالات پربازدید در سایدبار
+            popularViewElements.forEach((el, index) => {
+                const defaultViews = [12456, 9876, 7543, 6123];
+                if (index < defaultViews.length) {
+                    el.textContent = `${formatNumber(defaultViews[index])} بازدید`;
+                }
+            });
+
+            // برای مقالات برجسته
+            const featuredViewElements = document.querySelectorAll('.featured-article .article-stats .stat:nth-child(1)');
+            const featuredDefaults = [2451, 1892, 3124];
+            
+            featuredViewElements.forEach((el, index) => {
+                if (index < featuredDefaults.length) {
+                    const viewCount = featuredDefaults[index];
+                    el.innerHTML = `<i class="far fa-eye"></i> ${formatNumber(viewCount)}`;
+                }
+            });
+        }
+
+        // اجرا پس از بارگذاری کامل صفحه
+        document.addEventListener('DOMContentLoaded', function() {
+            // اجرای اولیه
+            fixViewCounts();
+            
+            // اجرای مجدد پس از 500ms برای اطمینان
+            setTimeout(fixViewCounts, 500);
+            
+            // اجرای مجدد پس از 2 ثانیه برای مطمئن شدن
+            setTimeout(fixViewCounts, 2000);
+        });
+    </script>
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button class="icon-btn menu-toggle" aria-label="منو">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="/assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <form class="search-form">
+                        <input type="text" placeholder="جستجوی مقالات..." aria-label="جستجوی مقالات">
+                        <button type="submit" aria-label="جستجو">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <button class="icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="icon-btn account-btn" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="product.html" class="nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="nav-link">تخفیف‌ها</a></li>
+                    <li><a href="/assemble.html" class="nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="nav-link active">مجله آکوامگ</a></li>
+                    <li><a href="about.html" class="nav-link">درباره ما</a></li>
+                    <li><a href="tel:02112345678" class="nav-link">تماس</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <img src="/assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                </div>
+                <button class="close-mobile-menu" aria-label="بستن منو">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav" aria-label="منوی موبایل">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="mobile-nav-link">خانه</a></li>
+                    <li><a href="product.html" class="mobile-nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="mobile-nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="mobile-nav-link">تخفیف‌ها</a></li>
+                    <li><a href="/assemble.html" class="mobile-nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="mobile-nav-link active">مجله آکوامگ</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">درباره ما</a></li>
+                    <li><a href="tel:02112345678" class="mobile-nav-link">تماس</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu-footer">
+                <div class="mobile-header-icons">
+                    <button class="mobile-icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-icon-btn account-btn" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="مسیر">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html">خانه</a></li>
+                    <li aria-current="page">مجله آکوامگ</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <!-- Blog Hero -->
+        <section class="blog-hero">
+            <div class="container">
+                <div class="blog-hero-content">
+                    <h1 class="page-title">AquaMag</h1>
+                    <p class="page-description">مرجع تخصصی اخبار، بررسی‌ها و مقالات گیمینگ و تکنولوژی</p>
+                    
+                    <div class="blog-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">۵۰۰+</span>
+                            <span class="stat-label">مقاله منتشر شده</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">۵۰+</span>
+                            <span class="stat-label">نویسنده متخصص</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">۱۰</span>
+                            <span class="stat-label">دسته‌بندی تخصصی</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Articles -->
+        <section class="featured-articles">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">مقالات برجسته</h2>
+                    <a href="#all-articles" class="view-all">مشاهده همه مقالات</a>
+                </div>
+                
+                <div class="featured-grid">
+                    <!-- Featured Article 1 -->
+                    <article class="featured-article large" data-category="gaming">
+                        <div class="article-image">
+                            <img src="/assets/img/shakhes_1.jpg" alt="جدیدترین کارت‌های گرافیک 2024" loading="lazy">
+                            <div class="article-badge">بررسی تخصصی</div>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="category gaming">گیمینگ</span>
+                                <span class="date"><i class="far fa-clock"></i> ۲ ساعت پیش</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="article.html">بررسی کامل سری RTX 5000: انقلابی در صنعت گرافیک</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                نگاهی عمیق به جدیدترین کارت‌های گرافیک انویدیا با معماری Blackwell. آیا این کارت‌ها ارزش سرمایه‌گذاری دارند؟
+                            </p>
+                            <div class="article-footer">
+                                <div class="author">
+                                    <img src="/assets/img/artworks-000085504604-juxs9q-t500x500.jpg" alt="علیرضا محمدی" class="author-avatar">
+                                    <span class="author-name">علیرضا محمدی</span>
+                                </div>
+                                <div class="article-stats">
+                                    <span class="stat"><i class="far fa-eye"></i> ۲,۴۵۱</span>
+                                    <span class="stat"><i class="far fa-comment"></i> ۸۷</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Featured Article 2 -->
+                    <article class="featured-article" data-category="hardware">
+                        <div class="article-image">
+                            <img src="/assets/img/1.jpg" alt="بهترین کیس‌های گیمینگ 2024" loading="lazy">
+                            <div class="article-badge">راهنمای خرید</div>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="category hardware">سخت‌افزار</span>
+                                <span class="date"><i class="far fa-clock"></i> ۱ روز پیش</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="/blog/best-gaming-cases-2024">۱۰ کیس برتر گیمینگ 2024: از نظر طراحی و عملکرد</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                مقایسه کامل بهترین کیس‌های بازار از برندهای مطرح مانند Lian Li، NZXT و Corsair
+                            </p>
+                            <div class="article-footer">
+                                <div class="author">
+                                    <img src="/assets/img/47ce82b8da1e993fb23f14de18481121.jpeg" alt="سارا کریمی" class="author-avatar">
+                                    <span class="author-name">سارا کریمی</span>
+                                </div>
+                                <div class="article-stats">
+                                    <span class="stat"><i class="far fa-eye"></i> ۱,۸۹۲</span>
+                                    <span class="stat"><i class="far fa-comment"></i> ۴۵</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Featured Article 3 -->
+                    <article class="featured-article" data-category="tutorial">
+                        <div class="article-image">
+                            <img src="/assets/img/Windows-11-1.webp" alt="بهینه‌سازی ویندوز برای گیمینگ" loading="lazy">
+                            <div class="article-badge">آموزشی</div>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="category tutorial">آموزش</span>
+                                <span class="date"><i class="far fa-clock"></i> ۲ روز پیش</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="/blog/windows-optimization-gaming">بهینه‌سازی ویندوز 11 برای گیمینگ: افزایش 20% عملکرد</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                آموزش قدم به قدم تنظیمات ضروری ویندوز برای رسیدن به حداکثر عملکرد در بازی‌ها
+                            </p>
+                            <div class="article-footer">
+                                <div class="author">
+                                    <img src="/assets/img/471871ff-3d2a-4aa7-b571-7ae1a4f998b1.webp" alt="محمد حسینی" class="author-avatar">
+                                    <span class="author-name">محمد حسینی</span>
+                                </div>
+                                <div class="article-stats">
+                                    <span class="stat"><i class="far fa-eye"></i> ۳,۱۲۴</span>
+                                    <span class="stat"><i class="far fa-comment"></i> ۱۱۲</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="blog-content" id="all-articles">
+            <div class="container">
+                <div class="blog-layout">
+                    <!-- Main Articles -->
+                    <div class="blog-main">
+                        <!-- Latest Articles -->
+                        <div class="articles-section">
+                            <div class="section-header">
+                                <h2 class="section-title">جدیدترین مقالات</h2>
+                                <div class="sort-controls">
+                                    <select class="sort-select">
+                                        <option value="newest">جدیدترین</option>
+                                        <option value="popular">پربازدیدترین</option>
+                                        <option value="commented">پرنظرترین</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="articles-grid">
+                                <!-- Article 1 -->
+                                <article class="article-card" data-category="hardware">
+                                    <div class="article-image">
+                                        <img src="/assets/img/best-intel-CPU.jpg" alt="مقایسه پردازنده‌های نسل 15 اینتل" loading="lazy">
+                                        <div class="article-badge">تحلیل بازار</div>
+                                    </div>
+                                    <div class="article-content">
+                                        <div class="article-meta">
+                                            <span class="category hardware">سخت‌افزار</span>
+                                            <span class="date"><i class="far fa-clock"></i> ۳ روز پیش</span>
+                                        </div>
+                                        <h3 class="article-title">
+                                            <a href="/blog/intel-15th-gen-comparison">مقایسه پردازنده‌های نسل 15 اینتل: کدام مدل برای گیمینگ بهتر است؟</a>
+                                        </h3>
+                                        <p class="article-excerpt">
+                                            بررسی تخصصی پردازنده‌های جدید اینتل و مقایسه عملکرد آن‌ها در بازی‌های مختلف
+                                        </p>
+                                        <div class="article-footer">
+                                            <div class="author">
+                                                <img src="/assets/img/images.jpg" alt="رضا احمدی" class="author-avatar">
+                                                <span class="author-name">رضا احمدی</span>
+                                            </div>
+                                            <div class="article-stats">
+                                                <span class="stat"><i class="far fa-eye"></i> ۲,۸۷۶</span>
+                                                <span class="stat"><i class="far fa-comment"></i> ۹۳</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <!-- Article 2 -->
+                                <article class="article-card" data-category="peripherals">
+                                    <div class="article-image">
+                                        <img src="/assets/img/best-gaming-monitor2.jpg" alt="بهترین مانیتورهای 4K گیمینگ" loading="lazy">
+                                        <div class="article-badge">راهنمای خرید</div>
+                                    </div>
+                                    <div class="article-content">
+                                        <div class="article-meta">
+                                            <span class="category peripherals">پریفرال</span>
+                                            <span class="date"><i class="far fa-clock"></i> ۴ روز پیش</span>
+                                        </div>
+                                        <h3 class="article-title">
+                                            <a href="/blog/best-4k-gaming-monitors">5 مانیتور برتر 4K برای گیمینگ حرفه‌ای در سال 2024</a>
+                                        </h3>
+                                        <p class="article-excerpt">
+                                            معرفی بهترین مانیتورهای 4K با نرخ تازه‌سازی بالا و تکنولوژی‌های پیشرفته
+                                        </p>
+                                        <div class="article-footer">
+                                            <div class="author">
+                                                <img src="/assets/img/images (1).jpg" alt="فاطمه نوری" class="author-avatar">
+                                                <span class="author-name">فاطمه نوری</span>
+                                            </div>
+                                            <div class="article-stats">
+                                                <span class="stat"><i class="far fa-eye"></i> ۱,۹۸۷</span>
+                                                <span class="stat"><i class="far fa-comment"></i> ۶۷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <!-- Article 3 -->
+                                <article class="article-card" data-category="tutorial">
+                                    <div class="article-image">
+                                        <img src="/assets/img/ram overclocking-946.webp" alt="آموزش اورکلاک RAM" loading="lazy">
+                                        <div class="article-badge">آموزش پیشرفته</div>
+                                    </div>
+                                    <div class="article-content">
+                                        <div class="article-meta">
+                                            <span class="category tutorial">آموزش</span>
+                                            <span class="date"><i class="far fa-clock"></i> ۵ روز پیش</span>
+                                        </div>
+                                        <h3 class="article-title">
+                                            <a href="/blog/ram-overclocking-guide">آموزش کامل اورکلاک RAM: افزایش 15% عملکرد در بازی‌ها</a>
+                                        </h3>
+                                        <p class="article-excerpt">
+                                            راهنمای قدم به قدم اورکلاک حافظه RAM با بیوس و نرم‌افزارهای تخصصی
+                                        </p>
+                                        <div class="article-footer">
+                                            <div class="author">
+                                                <img src="/assets/img/c62517c2-cd3a-49e9-9719-19b48fcdee7e.jpg" alt="علیرضا محمدی" class="author-avatar">
+                                                <span class="author-name">علیرضا محمدی</span>
+                                            </div>
+                                            <div class="article-stats">
+                                                <span class="stat"><i class="far fa-eye"></i> ۳,۴۵۶</span>
+                                                <span class="stat"><i class="far fa-comment"></i> ۱۲۴</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <!-- Article 4 -->
+                                <article class="article-card" data-category="gaming">
+                                    <div class="article-image">
+                                        <img src="/assets/img/digiro.ir-152.jpg" alt="معرفی بازی GTA 6" loading="lazy">
+                                        <div class="article-badge">اخبار گیمینگ</div>
+                                    </div>
+                                    <div class="article-content">
+                                        <div class="article-meta">
+                                            <span class="category gaming">گیمینگ</span>
+                                            <span class="date"><i class="far fa-clock"></i> ۱ هفته پیش</span>
+                                        </div>
+                                        <h3 class="article-title">
+                                            <a href="/blog/gta-6-first-look">نخستین نگاه به GTA 6: هرآنچه تاکنون می‌دانیم</a>
+                                        </h3>
+                                        <p class="article-excerpt">
+                                            جمع‌آوری تمام اطلاعات منتشر شده درباره منتظره‌ترین بازی دهه
+                                        </p>
+                                        <div class="article-footer">
+                                            <div class="author">
+                                                <img src="/assets/img/29xp-meme-mediumSquareAt3X-v5.jpg" alt="سارا کریمی" class="author-avatar">
+                                                <span class="author-name">سارا کریمی</span>
+                                            </div>
+                                            <div class="article-stats">
+                                                <span class="stat"><i class="far fa-eye"></i> ۱۵,۸۷۶</span>
+                                                <span class="stat"><i class="far fa-comment"></i> ۴۵۶</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <!-- Article 5 -->
+                                <article class="article-card" data-category="peripherals">
+                                    <div class="article-image">
+                                        <img src="/assets/img/headphone-vs-headset-gaming.jpg" alt="بهترین هدست‌های گیمینگ" loading="lazy">
+                                        <div class="article-badge">بررسی محصول</div>
+                                    </div>
+                                    <div class="article-content">
+                                        <div class="article-meta">
+                                            <span class="category peripherals">پریفرال</span>
+                                            <span class="date"><i class="far fa-clock"></i> ۱ هفته پیش</span>
+                                        </div>
+                                        <h3 class="article-title">
+                                            <a href="/blog/best-gaming-headsets-2024">مقایسه 7 هدست برتر گیمینگ 2024: از نظر صدا و راحتی</a>
+                                        </h3>
+                                        <p class="article-excerpt">
+                                            بررسی تخصصی هدست‌های SteelSeries، HyperX، Logitech و Razer
+                                        </p>
+                                        <div class="article-footer">
+                                            <div class="author">
+                                                <img src="/assets/img/images (2).jpg" alt="محمد حسینی" class="author-avatar">
+                                                <span class="author-name">محمد حسینی</span>
+                                            </div>
+                                            <div class="article-stats">
+                                                <span class="stat"><i class="far fa-eye"></i> ۲,۳۴۵</span>
+                                                <span class="stat"><i class="far fa-comment"></i> ۷۸</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <!-- Article 6 -->
+                                <article class="article-card" data-category="tutorial">
+                                    <div class="article-image">
+                                        <img src="/assets/img/41334867-4836-b__6414.webp" alt="آموزش اسمبل کامپیوتر" loading="lazy">
+                                        <div class="article-badge">آموزش مقدماتی</div>
+                                    </div>
+                                    <div class="article-content">
+                                        <div class="article-meta">
+                                            <span class="category tutorial">آموزش</span>
+                                            <span class="date"><i class="far fa-clock"></i> ۲ هفته پیش</span>
+                                        </div>
+                                        <h3 class="article-title">
+                                            <a href="/blog/pc-building-guide">آموزش تصویری اسمبل کامپیوتر گیمینگ برای مبتدیان</a>
+                                        </h3>
+                                        <p class="article-excerpt">
+                                            راهنمای کامل از انتخاب قطعات تا اسمبل کردن و نصب سیستم عامل
+                                        </p>
+                                        <div class="article-footer">
+                                            <div class="author">
+                                                <img src="/assets/img/adolf-hitler-meme-6.jpg" alt="رضا احمدی" class="author-avatar">
+                                                <span class="author-name">رضا احمدی</span>
+                                            </div>
+                                            <div class="article-stats">
+                                                <span class="stat"><i class="far fa-eye"></i> ۴,۱۲۳</span>
+                                                <span class="stat"><i class="far fa-comment"></i> ۲۰۱</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            
+                            <!-- Load More -->
+                            <div class="load-more">
+                                <button class="btn btn-outline load-more-btn">
+                                    <i class="fas fa-redo"></i>
+                                    بارگذاری مقالات بیشتر
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar -->
+                    <aside class="blog-sidebar">
+                        <!-- Categories -->
+                        <div class="sidebar-widget categories-widget">
+                            <h3 class="widget-title">دسته‌بندی‌ها</h3>
+                            <ul class="categories-list">
+                                <li>
+                                    <a href="#" class="category-link" data-category="all">
+                                        <span class="category-name">همه مقالات</span>
+                                        <span class="category-count">۵۴۰</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-link" data-category="gaming">
+                                        <span class="category-name">گیمینگ</span>
+                                        <span class="category-count">۱۲۸</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-link" data-category="hardware">
+                                        <span class="category-name">سخت‌افزار</span>
+                                        <span class="category-count">۹۵</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-link" data-category="peripherals">
+                                        <span class="category-name">پریفرال</span>
+                                        <span class="category-count">۷۶</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-link" data-category="tutorial">
+                                        <span class="category-name">آموزش</span>
+                                        <span class="category-count">۱۵۴</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-link" data-category="news">
+                                        <span class="category-name">اخبار</span>
+                                        <span class="category-count">۸۷</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Popular Articles -->
+                        <div class="sidebar-widget popular-widget">
+                            <h3 class="widget-title">مقالات پربازدید</h3>
+                            <div class="popular-articles">
+                                <article class="popular-article">
+                                    <div class="popular-image">
+                                        <img src="/assets/img/95522.webp" alt="بهترین کارت گرافیک میان‌رده" loading="lazy">
+                                    </div>
+                                    <div class="popular-content">
+                                        <h4>
+                                            <a href="/blog/best-midrange-gpu">بهترین کارت گرافیک میان‌رده 2024</a>
+                                        </h4>
+                                        <div class="article-meta">
+                                            <span class="date">۳ روز پیش</span>
+                                            <span class="views">۱۲,۴۵۶ بازدید</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <article class="popular-article">
+                                    <div class="popular-image">
+                                        <img src="/assets/img/assets_task_01k6htbxsqfxkvrd65vh3hesxz_1759387266_img_0.webp" alt="تنظیمات نهایی بازی" loading="lazy">
+                                    </div>
+                                    <div class="popular-content">
+                                        <h4>
+                                            <a href="/blog/ultimate-game-settings">تنظیمات نهایی برای بهترین تجربه گیمینگ</a>
+                                        </h4>
+                                        <div class="article-meta">
+                                            <span class="date">۱ هفته پیش</span>
+                                            <span class="views">۹,۸۷۶ بازدید</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <article class="popular-article">
+                                    <div class="popular-image">
+                                        <img src="/assets/img/be1e51bbf04844b7946f9b877ac05bf9.webp" alt="مقایسه SSD های NVMe" loading="lazy">
+                                    </div>
+                                    <div class="popular-content">
+                                        <h4>
+                                            <a href="/blog/nvme-ssd-comparison">مقایسه 10 SSD NVMe برتر بازار</a>
+                                        </h4>
+                                        <div class="article-meta">
+                                            <span class="date">۲ هفته پیش</span>
+                                            <span class="views">۷,۵۴۳ بازدید</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <article class="popular-article">
+                                    <div class="popular-image">
+                                        <img src="/assets/img/2عکس-شاخص-6-1.webp" alt="آموزش کابل‌کشی کیس" loading="lazy">
+                                    </div>
+                                    <div class="popular-content">
+                                        <h4>
+                                            <a href="/blog/cable-management-guide">آموزش کابل‌کشی حرفه‌ای در کیس</a>
+                                        </h4>
+                                        <div class="article-meta">
+                                            <span class="date">۳ هفته پیش</span>
+                                            <span class="views">۶,۱۲۳ بازدید</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        
+                        <!-- Newsletter -->
+                        <div class="sidebar-widget newsletter-widget">
+                            <h3 class="widget-title">عضویت در خبرنامه</h3>
+                            <p>جدیدترین مقالات و اخبار گیمینگ را در ایمیل خود دریافت کنید</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="ایمیل خود را وارد کنید" aria-label="ایمیل برای خبرنامه">
+                                <button type="submit" class="btn btn-primary">عضویت</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Tags -->
+                        <div class="sidebar-widget tags-widget">
+                            <h3 class="widget-title">برچسب‌های محبوب</h3>
+                            <div class="tags-list">
+                                <a href="#" class="tag" data-tag="gaming">گیمینگ</a>
+                                <a href="#" class="tag" data-tag="nvidia">NVIDIA</a>
+                                <a href="#" class="tag" data-tag="amd">AMD</a>
+                                <a href="#" class="tag" data-tag="intel">Intel</a>
+                                <a href="#" class="tag" data-tag="rtx">RTX</a>
+                                <a href="#" class="tag" data-tag="ssd">SSD</a>
+                                <a href="#" class="tag" data-tag="ram">RAM</a>
+                                <a href="#" class="tag" data-tag="overclocking">اورکلاک</a>
+                                <a href="#" class="tag" data-tag="pc-build">اسمبل</a>
+                                <a href="#" class="tag" data-tag="4k">4K</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>در خبرنامه آکوامگ عضو شوید</h2>
+                        <p>هفته‌ای یک بار بهترین مقالات گیمینگ و تکنولوژی را در ایمیل خود دریافت کنید</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="ایمیل خود را وارد کنید" aria-label="ایمیل برای خبرنامه">
+                        <button type="submit" class="btn btn-primary">عضویت رایگان</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="/assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </div>
+                    <p class="footer-description">
+                        AquaMag مرجع تخصصی مقالات، اخبار و بررسی‌های حوزه گیمینگ و تکنولوژی
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="اینستاگرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="تلگرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" aria-label="یوتیوب">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="توییتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">لینک‌های مفید</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="blog.html">مجله آکوامگ</a></li>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="tel:02112345678">تماس با ما</a></li>
+                        <li><a href="/privacy">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">دسته‌بندی‌ها</h3>
+                    <ul class="footer-links">
+                        <li><a href="/blog/category/gaming">گیمینگ</a></li>
+                        <li><a href="/blog/category/hardware">سخت‌افزار</a></li>
+                        <li><a href="/blog/category/tutorial">آموزش</a></li>
+                        <li><a href="/blog/category/news">اخبار</a></li>
+                        <li><a href="/blog/category/reviews">بررسی محصول</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">اطلاعات تماس</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>mag@aquamarket.ir</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>۰۲۱-۱۲۳۴۵۶۷۸</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>تهران، خیابان ولیعصر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>کلیه حقوق این وب‌سایت متعلق به AquaMag می‌باشد © 1404</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="sitemap.html">نقشه سایت</a>
+                    <a href="/privacy-terms.html">قوانین و مقررات</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <button class="floating-btn back-to-top" aria-label="بازگشت به بالا">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+    <script src="js/blog.js" defer></script>
+    
+    <script>
+        // رفع مشکل نهایی با اجرای مجدد پس از 3 ثانیه
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                fixViewCounts();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

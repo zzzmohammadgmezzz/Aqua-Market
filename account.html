@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حساب کاربری | AquaMarket</title>
+    <meta name="description" content="مدیریت حساب کاربری، سفارش‌ها و اطلاعات شخصی در AquaMarket">
+    
+    <!-- Persian Font -->
+    <link rel="stylesheet" href="assets/fonts/vazirmatn-v33.003/Vazirmatn-font-face.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/account.css">
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button type="button" class="icon-btn menu-toggle" aria-label="منو">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <form class="search-form" id="search-form">
+                        <input type="text" id="search-input" placeholder="جستجوی محصولات..." aria-label="جستجوی محصولات" autocomplete="off">
+                        <button type="submit" aria-label="جستجو">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <button type="button" class="icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun" style="display: none;"></i>
+                    </button>
+                    
+                    <a href="cart.html" class="icon-btn cart-btn" aria-label="سبد خرید">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                    
+                    <a href="account.html" class="icon-btn account-btn active" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="product.html" class="nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="nav-link">تخفیف‌ها</a></li>
+                    <li><a href="assemble.html" class="nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="nav-link">مجله آکوامگ</a></li>
+                    <li><a href="about.html" class="nav-link">درباره ما</a></li>
+                    <li><a href="contact.html" class="nav-link">تماس</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <img src="assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                </div>
+                <button type="button" class="close-mobile-menu" aria-label="بستن منو">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav" aria-label="منوی موبایل">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="mobile-nav-link">خانه</a></li>
+                    <li><a href="product.html" class="mobile-nav-link">محصولات</a></li>
+                    <li><a href="product.html?filter=bestsellers" class="mobile-nav-link">پرفروش‌ها</a></li>
+                    <li><a href="product.html?filter=discounts" class="mobile-nav-link">تخفیف‌ها</a></li>
+                    <li><a href="assemble.html" class="mobile-nav-link">اسمبل هوشمند</a></li>
+                    <li><a href="blog.html" class="mobile-nav-link">مجله آکوامگ</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">درباره ما</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">تماس</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu-footer">
+                <div class="mobile-header-icons">
+                    <button type="button" class="mobile-icon-btn theme-toggle" aria-label="تغییر تم">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun" style="display: none;"></i>
+                    </button>
+                    
+                    <a href="cart.html" class="mobile-icon-btn cart-btn" aria-label="سبد خرید">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                    
+                    <a href="account.html" class="mobile-icon-btn account-btn active" aria-label="حساب کاربری">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="مسیر">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html">خانه</a></li>
+                    <li aria-current="page">حساب کاربری</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="account-page">
+        <div class="container">
+            <div class="account-container">
+                <!-- Sidebar -->
+                <aside class="account-sidebar">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <img src="assets/img/images.jpg" alt="علی امینی">
+                            <button class="change-avatar" aria-label="تغییر عکس پروفایل">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <div class="user-info">
+                            <h3 class="user-name">علی امینی</h3>
+                            <p class="user-email">ali.amini@email.com</p>
+                            <div class="user-membership">
+                                <span class="membership-badge">
+                                    <i class="fas fa-crown"></i>
+                                    کاربر ویژه
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <nav class="account-menu">
+                        <ul class="menu-list">
+                            <li>
+                                <a href="#dashboard" class="menu-item active" data-section="dashboard">
+                                    <i class="fas fa-home"></i>
+                                    <span>پیشخوان</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#orders" class="menu-item" data-section="orders">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span>سفارش‌های من</span>
+                                    <span class="badge">2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#order-tracking" class="menu-item" data-section="order-tracking">
+                                    <i class="fas fa-truck"></i>
+                                    <span>پیگیری سفارش</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#addresses" class="menu-item" data-section="addresses">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>آدرس‌ها</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#profile" class="menu-item" data-section="profile">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>مشخصات شخصی</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#wishlist" class="menu-item" data-section="wishlist">
+                                    <i class="fas fa-heart"></i>
+                                    <span>علاقه‌مندی‌ها</span>
+                                    <span class="badge">5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#reviews" class="menu-item" data-section="reviews">
+                                    <i class="fas fa-star"></i>
+                                    <span>نظرات من</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tickets" class="menu-item" data-section="tickets">
+                                    <i class="fas fa-headset"></i>
+                                    <span>تیکت‌های پشتیبانی</span>
+                                    <span class="badge">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#logout" class="menu-item logout" data-section="logout">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>خروج از حساب</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+                
+                <!-- Main Content -->
+                <div class="account-content">
+                    <!-- Dashboard Section -->
+                    <section id="dashboard" class="content-section active">
+                        <div class="section-header">
+                            <h2 class="section-title">پیشخوان حساب کاربری</h2>
+                            <p class="welcome-message">سلام علی عزیز، به حساب کاربری‌تان خوش آمدید!</p>
+                        </div>
+                        
+                        <div class="dashboard-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>۲ سفارش</h3>
+                                    <p>سفارش‌های فعال</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>۵ محصول</h3>
+                                    <p>لیست علاقه‌مندی‌ها</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>۱۲ نظر</h3>
+                                    <p>نظرات ثبت شده</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>۱۵۰۰ امتیاز</h3>
+                                    <p>امتیاز وفاداری</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="recent-orders">
+                            <h3>آخرین سفارش‌ها</h3>
+                            <div class="orders-list">
+                                <div class="order-card">
+                                    <div class="order-header">
+                                        <div class="order-info">
+                                            <span class="order-id">سفارش #ORD-2024-001</span>
+                                            <span class="order-date">۱۴۰۳/۰۱/۱۵</span>
+                                        </div>
+                                        <div class="order-status status-processing">
+                                            <i class="fas fa-clock"></i>
+                                            در حال پردازش
+                                        </div>
+                                    </div>
+                                    <div class="order-products">
+                                        <div class="product-item">
+                                            <img src="assets/img/1-41.webp" alt="کارت گرافیک RTX 4080">
+                                            <span>کارت گرافیک NVIDIA GeForce RTX 4080 16GB</span>
+                                        </div>
+                                        <div class="product-item">
+                                            <img src="assets/img/1-84.webp" alt="خنک‌کننده مایع">
+                                            <span>خنک‌کننده مایع NZXT Kraken Z73 RGB</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-footer">
+                                        <div class="order-total">
+                                            <span>مبلغ کل:</span>
+                                            <span class="total-price">۶۸,۸۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <button class="btn btn-outline order-details-btn" data-order="1">مشاهده جزئیات</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Orders Section -->
+                    <section id="orders" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">سفارش‌های من</h2>
+                            <p>تاریخچه کلیه سفارش‌های شما در این بخش نمایش داده می‌شود.</p>
+                        </div>
+                        
+                        <div class="orders-table-container">
+                            <div class="table-responsive">
+                                <table class="orders-table">
+                                    <thead>
+                                        <tr>
+                                            <th>شماره سفارش</th>
+                                            <th>تاریخ</th>
+                                            <th>وضعیت</th>
+                                            <th>مبلغ</th>
+                                            <th>عملیات</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#ORD-2024-002</td>
+                                            <td>۱۴۰۳/۰۱/۱۸</td>
+                                            <td><span class="status status-delivered">تحویل شده</span></td>
+                                            <td>۳۲,۰۰۰,۰۰۰ تومان</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline" data-order="2">جزئیات</button>
+                                                <button class="btn btn-sm btn-primary">دریافت فاکتور</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#ORD-2024-001</td>
+                                            <td>۱۴۰۳/۰۱/۱۵</td>
+                                            <td><span class="status status-processing">در حال پردازش</span></td>
+                                            <td>۶۸,۸۰۰,۰۰۰ تومان</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline" data-order="1">جزئیات</button>
+                                                <button class="btn btn-sm btn-primary">پیگیری</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#ORD-2023-125</td>
+                                            <td>۱۴۰۲/۱۲/۲۰</td>
+                                            <td><span class="status status-cancelled">لغو شده</span></td>
+                                            <td>۱۵,۵۰۰,۰۰۰ تومان</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline" data-order="3">جزئیات</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Order Tracking Section -->
+                    <section id="order-tracking" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">پیگیری سفارش</h2>
+                            <p>وضعیت سفارش خود را در این بخش پیگیری کنید.</p>
+                        </div>
+                        
+                        <div class="order-tracking-container">
+                            <div class="tracking-input">
+                                <div class="form-group">
+                                    <label for="order-number">شماره سفارش</label>
+                                    <input type="text" id="order-number" placeholder="مثال: ORD-2024-001" value="ORD-2024-001">
+                                    <button class="btn btn-primary">پیگیری سفارش</button>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-container">
+                                <h3>وضعیت سفارش #ORD-2024-001</h3>
+                                <div class="order-timeline">
+                                    <div class="timeline-step completed">
+                                        <div class="step-icon">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </div>
+                                        <div class="step-content">
+                                            <h4>سفارش ثبت شد</h4>
+                                            <p>۱۴۰۳/۰۱/۱۵ - ساعت ۱۴:۳۰</p>
+                                            <p>سفارش شما با موفقیت ثبت شد و در انتظار تایید است.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-step completed">
+                                        <div class="step-icon">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="step-content">
+                                            <h4>تایید سفارش</h4>
+                                            <p>۱۴۰۳/۰۱/۱۵ - ساعت ۱۶:۴۵</p>
+                                            <p>سفارش شما توسط واحد فروش تایید شد.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-step active">
+                                        <div class="step-icon">
+                                            <i class="fas fa-box"></i>
+                                        </div>
+                                        <div class="step-content">
+                                            <h4>آماده‌سازی سفارش</h4>
+                                            <p>۱۴۰۳/۰۱/۱۶ - ساعت ۰۹:۱۵</p>
+                                            <p>سفارش شما در انبار در حال آماده‌سازی است.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-step pending">
+                                        <div class="step-icon">
+                                            <i class="fas fa-shipping-fast"></i>
+                                        </div>
+                                        <div class="step-content">
+                                            <h4>تحویل به پست</h4>
+                                            <p>در انتظار</p>
+                                            <p>پس از آماده‌سازی، سفارش به پست تحویل داده می‌شود.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-step pending">
+                                        <div class="step-icon">
+                                            <i class="fas fa-home"></i>
+                                        </div>
+                                        <div class="step-content">
+                                            <h4>تحویل به مشتری</h4>
+                                            <p>در انتظار</p>
+                                            <p>سفارش به آدرس شما ارسال خواهد شد.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="order-details-summary">
+                                <h3>جزئیات سفارش</h3>
+                                <div class="details-grid">
+                                    <div class="detail-item">
+                                        <span>شماره سفارش:</span>
+                                        <strong>ORD-2024-001</strong>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span>تاریخ سفارش:</span>
+                                        <strong>۱۴۰۳/۰۱/۱۵</strong>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span>روش پرداخت:</span>
+                                        <strong>درگاه پرداخت آنلاین</strong>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span>روش ارسال:</span>
+                                        <strong>پست پیشتاز</strong>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span>آدرس تحویل:</span>
+                                        <strong>تهران، خیابان ولیعصر، کوچه ۱۰، پلاک ۲۵</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Addresses Section -->
+                    <section id="addresses" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">آدرس‌های من</h2>
+                            <button class="btn btn-primary add-address-btn">
+                                <i class="fas fa-plus"></i>
+                                افزودن آدرس جدید
+                            </button>
+                        </div>
+                        
+                        <div class="addresses-grid">
+                            <div class="address-card default">
+                                <div class="address-header">
+                                    <h4>آدرس پیش‌فرض</h4>
+                                    <span class="default-badge">پیش‌فرض</span>
+                                </div>
+                                <div class="address-body">
+                                    <p><strong>علی امینی</strong></p>
+                                    <p>۰۹۱۲۳۴۵۶۷۸۹</p>
+                                    <p>تهران، خیابان ولیعصر، کوچه ۱۰، پلاک ۲۵</p>
+                                    <p>کد پستی: ۱۲۳۴۵۶۷۸۹۰</p>
+                                </div>
+                                <div class="address-footer">
+                                    <button class="btn btn-sm btn-outline edit-address">
+                                        <i class="fas fa-edit"></i>
+                                        ویرایش
+                                    </button>
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                        حذف
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="address-card">
+                                <div class="address-header">
+                                    <h4>آدرس محل کار</h4>
+                                </div>
+                                <div class="address-body">
+                                    <p><strong>علی امینی</strong></p>
+                                    <p>۰۲۱-۸۸۷۷۶۶۵۵</p>
+                                    <p>تهران، میدان ونک، بلوار میرداماد، برج مهر، طبقه ۸</p>
+                                    <p>کد پستی: ۹۸۷۶۵۴۳۲۱۰</p>
+                                </div>
+                                <div class="address-footer">
+                                    <button class="btn btn-sm btn-outline edit-address">
+                                        <i class="fas fa-edit"></i>
+                                        ویرایش
+                                    </button>
+                                    <button class="btn btn-sm set-default-btn">
+                                        <i class="fas fa-star"></i>
+                                        پیش‌فرض
+                                    </button>
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                        حذف
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Profile Section -->
+                    <section id="profile" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">مشخصات شخصی</h2>
+                            <p>اطلاعات شخصی و حساب کاربری خود را در این بخش مدیریت کنید.</p>
+                        </div>
+                        
+                        <form class="profile-form" id="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">نام</label>
+                                    <input type="text" id="first-name" value="علی" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">نام خانوادگی</label>
+                                    <input type="text" id="last-name" value="امینی" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">ایمیل</label>
+                                    <input type="email" id="email" value="ali.amini@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">شماره موبایل</label>
+                                    <input type="tel" id="phone" value="۰۹۱۲۳۴۵۶۷۸۹" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="birthdate">تاریخ تولد</label>
+                                <input type="text" id="birthdate" value="۱۳۷۵/۰۵/۲۰">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="national-code">کد ملی</label>
+                                <input type="text" id="national-code" value="۰۰۱۲۳۴۵۶۷۸">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>جنسیت</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="gender" value="male" checked>
+                                        <span class="radio-custom"></span>
+                                        آقا
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="gender" value="female">
+                                        <span class="radio-custom"></span>
+                                        خانم
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i>
+                                    ذخیره تغییرات
+                                </button>
+                                <button type="button" class="btn btn-outline" id="change-password-btn">
+                                    <i class="fas fa-lock"></i>
+                                    تغییر رمز عبور
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <!-- Change Password Modal (Hidden by default) -->
+                        <div class="change-password-section" id="change-password-section" style="display: none;">
+                            <h3>تغییر رمز عبور</h3>
+                            <form class="password-form" id="password-form">
+                                <div class="form-group">
+                                    <label for="current-password">رمز عبور فعلی</label>
+                                    <input type="password" id="current-password" required>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="new-password">رمز عبور جدید</label>
+                                        <input type="password" id="new-password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirm-password">تکرار رمز عبور جدید</label>
+                                        <input type="password" id="confirm-password" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">تغییر رمز عبور</button>
+                                    <button type="button" class="btn btn-outline cancel-password-btn">لغو</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    
+                    <!-- Wishlist Section -->
+                    <section id="wishlist" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">لیست علاقه‌مندی‌ها</h2>
+                            <p>محصولاتی که به لیست علاقه‌مندی‌های خود اضافه کرده‌اید.</p>
+                        </div>
+                        
+                        <div class="wishlist-grid">
+                            <div class="wishlist-item">
+                                <div class="wishlist-product">
+                                    <div class="product-image">
+                                        <img src="assets/img/2-21.webp" alt="کارت گرافیک RX 7900">
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>کارت گرافیک AMD Radeon RX 7900 XTX 24GB</h4>
+                                        <div class="price-row">
+                                            <span class="old-price">۷۲,۰۰۰,۰۰۰ تومان</span>
+                                            <span class="new-price">۵۹,۰۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <div class="product-stock in-stock">
+                                            <i class="fas fa-check-circle"></i>
+                                            موجود در انبار
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wishlist-actions">
+                                    <button class="btn btn-primary add-to-cart-btn">
+                                        <i class="fas fa-cart-plus"></i>
+                                        افزودن به سبد خرید
+                                    </button>
+                                    <button class="btn btn-outline remove-wishlist-btn">
+                                        <i class="fas fa-trash"></i>
+                                        حذف
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="wishlist-item">
+                                <div class="wishlist-product">
+                                    <div class="product-image">
+                                        <img src="assets/img/1728229073801_444.webp" alt="SSD Samsung">
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>حافظه SSD Samsung 990 Pro 2TB NVMe</h4>
+                                        <div class="price-row">
+                                            <span class="new-price">۸,۹۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <div class="product-stock low-stock">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                            موجودی محدود
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wishlist-actions">
+                                    <button class="btn btn-primary add-to-cart-btn">
+                                        <i class="fas fa-cart-plus"></i>
+                                        افزودن به سبد خرید
+                                    </button>
+                                    <button class="btn btn-outline remove-wishlist-btn">
+                                        <i class="fas fa-trash"></i>
+                                        حذف
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Reviews Section -->
+                    <section id="reviews" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">نظرات من</h2>
+                            <p>نظراتی که برای محصولات مختلف ثبت کرده‌اید.</p>
+                        </div>
+                        
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="review-product">
+                                        <img src="assets/img/1-41.webp" alt="کارت گرافیک RTX 4080">
+                                        <div>
+                                            <h4>کارت گرافیک NVIDIA GeForce RTX 4080 16GB</h4>
+                                            <div class="review-rating">
+                                                <div class="stars">
+                                                    <i class="fas fa-star active"></i>
+                                                    <i class="fas fa-star active"></i>
+                                                    <i class="fas fa-star active"></i>
+                                                    <i class="fas fa-star active"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="review-date">۱۴۰۳/۰۱/۱۰</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-body">
+                                    <p>کارت گرافیک فوق‌العاده‌ای هست. عملکرد بسیار خوبی در بازی‌های جدید داره و سیستم خنک‌کننده عالی ساخته شده. صداش هم خیلی کمه.</p>
+                                </div>
+                                <div class="review-footer">
+                                    <span class="review-status approved">
+                                        <i class="fas fa-check"></i>
+                                        تایید شده
+                                    </span>
+                                    <button class="btn btn-sm btn-outline">ویرایش نظر</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Tickets Section -->
+                    <section id="tickets" class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">تیکت‌های پشتیبانی</h2>
+                            <button class="btn btn-primary new-ticket-btn">
+                                <i class="fas fa-plus"></i>
+                                تیکت جدید
+                            </button>
+                        </div>
+                        
+                        <div class="tickets-list">
+                            <div class="ticket-item">
+                                <div class="ticket-header">
+                                    <div class="ticket-info">
+                                        <h4>سوال درباره گارانتی محصول</h4>
+                                        <span class="ticket-id">#TKT-2024-001</span>
+                                    </div>
+                                    <div class="ticket-status status-open">
+                                        <i class="fas fa-circle"></i>
+                                        باز
+                                    </div>
+                                </div>
+                                <div class="ticket-body">
+                                    <p>سلام، من کارت گرافیک RTX 4080 رو خریدم، می‌خواستم بدونم گارانتی این محصول چند ساله و شامل چه مواردی میشه؟</p>
+                                </div>
+                                <div class="ticket-footer">
+                                    <span class="ticket-date">ارسال شده در ۱۴۰۳/۰۱/۱۶</span>
+                                    <button class="btn btn-sm btn-primary">مشاهده مکالمه</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Logout Section -->
+                    <section id="logout" class="content-section">
+                        <div class="logout-container">
+                            <div class="logout-icon">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </div>
+                            <h2>خروج از حساب کاربری</h2>
+                            <p>آیا مطمئن هستید که می‌خواهید از حساب کاربری خود خارج شوید؟</p>
+                            <p>پس از خروج، برای دسترسی به بخش حساب کاربری باید مجدداً وارد شوید.</p>
+                            
+                            <div class="logout-actions">
+                                <button class="btn btn-danger logout-confirm-btn">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    بله، خارج شو
+                                </button>
+                                <button class="btn btn-outline cancel-logout-btn">
+                                    <i class="fas fa-times"></i>
+                                    لغو
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/img/Untitled-3.png" alt="AquaMarket لوگو" width="150" height="40">
+                    </div>
+                    <p class="footer-description">
+                        AquaMarket مرجع تخصصی قطعات کامپیوتر، گیمینگ و تکنولوژی با بهترین قیمت و گارانتی
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="اینستاگرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="تلگرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" aria-label="یوتیوب">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="توییتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">لینک‌های مفید</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="product.html">محصولات</a></li>
+                        <li><a href="blog.html">مجله آکوامگ</a></li>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">خدمات مشتریان</h3>
+                    <ul class="footer-links">
+                        <li><a href="shipping.html">اطلاعات ارسال</a></li>
+                        <li><a href="warranty.html">گارانتی محصولات</a></li>
+                        <li><a href="return.html">شرایط بازگرداندن کالا</a></li>
+                        <li><a href="faq.html">سوالات متداول</a></li>
+                        <li><a href="support.html">پشتیبانی</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">اطلاعات تماس</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@aquamarket.ir</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>۰۲۱-۱۲۳۴۵۶۷۸</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>تهران، خیابان ولیعصر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>کلیه حقوق این وب‌سایت متعلق به AquaMarket می‌باشد © 1404</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="sitemap.html">نقشه سایت</a>
+                    <a href="privacy-terms.html">قوانین و مقررات</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <button type="button" class="floating-btn back-to-top" aria-label="بازگشت به بالا">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <button type="button" class="floating-btn support-btn" aria-label="پشتیبانی آنلاین">
+        <i class="fas fa-headset"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html>
