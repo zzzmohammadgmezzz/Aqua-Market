@@ -6,6 +6,9 @@
 
 ---
 
+![GitHub stars](https://img.shields.io/github/stars/zzzmohammadgmezzz/Aqua-Market)
+![GitHub license](https://img.shields.io/github/license/zzzmohammadgmezzz/Aqua-Market)
+
 ## 🌐 Live Demo | دمو آنلاین
 
 🔗 **GitHub Pages:**  
